@@ -76,7 +76,34 @@
         <p class="text-center">
             &copy; 2026 HTML Video Practice
         </p>
+<script>
+const videos = document.querySelectorAll("video");
 
+function pauseOtherVideos(currentVideo) {
+
+    videos.forEach(video => {
+
+        if (video !== currentVideo) {
+
+            video.pause();
+
+        }
+
+    });
+
+}
+
+videos.forEach(video => {
+
+    video.addEventListener("play", () => {
+
+        pauseOtherVideos(video);
+
+    });
+
+});
+    
+</script>
     </body>
 
 </html>
