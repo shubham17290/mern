@@ -23,7 +23,7 @@
         <hr>
 
         <div class="video-block">
-            <h2>1.No One Becomes successful In One Day</h2>
+            <h2>1.Do Not COMMIT to Anyone Unless...</h2>
             <video width="700" controls>
                 <source
                     src="Assets/Do Not COMMIT to Anyone UNLESS… ｜ 48 Laws Of Power [fWleq0t_NlA].mp4"
@@ -33,11 +33,11 @@
         </div>
 
         <div class="video-block">
-            <h2>2. Do Not COMMIT to Anyone Unless...</h2>
+            <h2>2.No one becomes successful in one day...</h2>
             <video width="700" controls preload="metadata" loop>
                 <source
                     src="Assets/No One Becomes Successful Overnight! 💯🙌🏻 [IcIv2PxJdio].mkv"
-                    type="video/mp4">
+                    type="video/x-matroska">
                 Your browser does not support the HTML5 video tag.
             </video>
         </div>
@@ -77,6 +77,40 @@
             &copy; 2026 HTML Video Practice
         </p>
 
+        <body>
+
+            <!-- All Your Videos -->
+
+            <script>
+
+        const videos = document.querySelectorAll("video");
+
+            function pauseOtherVideos(currentVideo) {
+
+                videos.forEach(video => {
+
+                    if (video !== currentVideo) {
+
+                        video.pause();
+
+                    }
+
+                });
+
+            }
+
+            videos.forEach(video => {
+
+                video.addEventListener("play", () => {
+
+                    pauseOtherVideos(video);
+
+                });
+
+            });
+    </script>
+
+        </body>
     </body>
 
 </html>
