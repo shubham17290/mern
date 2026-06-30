@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+</head>
+
+<body>
+    
+
+    <h1>Employee Registration Form</h1>
+
+    <!-- Form Starts -->
+    <form action="/Server" method="POST" autocomplete="on">
+
+        <!-- ================= Personal Information ================= -->
+
+        <fieldset>
+
+            <legend>Personal Information</legend>
+
+            <!-- Full Name -->
+            <label for="fullName">Full Name</label><br>
+
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required autofocus
+                minlength="3" maxlength="40">
+
+            <br><br>
+
+            <!-- Email -->
+            <label for="email">Email Address</label><br>
+
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required autocomplete="email">
+
+            <br><br>
+
+            <!-- Password -->
+            <label for="password">Password</label><br>
+
+            <input type="password" id="password" name="password" placeholder="Minimum 8 characters" required
+                minlength="8">
+
+            <br><br>
+
+            <!-- Phone -->
+            <label for="phone">Phone Number</label><br>
+
+            <input type="tel" id="phone" name="phone" placeholder="9876543210" maxlength="10">
+
+            <br><br>
+
+            <!-- Date of Birth -->
+            <label for="dob">Date of Birth</label><br>
+
+            <input type="date" id="dob" name="dob">
+
+            <br><br>
+
+            <!-- Age -->
+            <label for="age">Age</label><br>
+
+            <input type="number" id="age" name="age" min="18" max="60">
+
+        </fieldset>
+
+        <br>
+
+        <!-- ================= Gender ================= -->
+
+        <fieldset>
+
+            <legend>Gender</legend>
+
+            <input type="radio" id="male" name="gender" value="Male">
+
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="Female">
+
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="Other">
+
+            <label for="other">Other</label>
+
+        </fieldset>
+
+        <br>
+
+        <!-- ================= Skills ================= -->
+
+        <fieldset>
+
+            <legend>Skills</legend>
+
+            <input type="checkbox" id="html" name="skills" value="HTML" checked>
+
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="css" name="skills" value="CSS">
+
+            <label for="css">CSS</label>
+
+            <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+
+            <label for="javascript">JavaScript</label>
+
+        </fieldset>
+
+        <br>
+
+        <!-- ================= Department ================= -->
+
+        <label for="department">Department</label><br>
+
+        <select id="department" name="department">
+
+            <option value="">Select Department</option>
+
+            <option value="frontend">
+                Frontend Development
+            </option>
+
+            <option value="backend">
+                Backend Development
+            </option>
+
+            <option value="fullstack">
+                Full Stack Development
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <!-- ================= Website ================= -->
+
+        <label for="portfolio">Portfolio Website</label><br>
+
+        <input type="url" id="portfolio" name="portfolio" placeholder="https://yourportfolio.com">
+
+        <br><br>
+
+        <!-- ================= Resume ================= -->
+
+        <label for="resume">Upload Resume</label><br>
+
+        <input type="file" id="resume" name="resume">
+
+        <br><br>
+
+        <!-- ================= About Yourself ================= -->
+
+        <label for="about">About Yourself</label><br>
+
+        <textarea id="about" name="about" rows="5" cols="40" placeholder="Write something about yourself..."></textarea>
+
+        <br><br>
+
+        <!-- ================= Readonly Example ================= -->
+
+        <label for="employeeId">Employee ID</label><br>
+
+        <input type="text" id="employeeId" name="employeeId" value="EMP2026001" readonly>
+
+        <br><br>
+
+        <!-- ================= Disabled Example ================= -->
+
+        <label for="company">Company</label><br>
+
+        <input type="text" id="company" value="Google" disabled>
+
+        <br><br>
+
+        <!-- ================= Buttons ================= -->
+
+        <button type="submit">
+            Register
+        </button>
+
+        <button type="reset">
+            Reset
+        </button>
+
+    </form>
+
+    <!-- Form Ends -->
+
+</body>
+
+</html>
