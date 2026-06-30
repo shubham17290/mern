@@ -76,7 +76,10 @@
         <p class="text-center">
             &copy; 2026 HTML Video Practice
         </p>
+<script>
+const videos = document.querySelectorAll("video");
 
+<<<<<<< HEAD:01 HTML/01 HTML level 02/03 Assignment Questions/Practice Q 04 .html
         <body>
 
             <!-- All Your Videos -->
@@ -111,6 +114,33 @@
     </script>
 
         </body>
+=======
+function pauseOtherVideos(currentVideo) {
+
+    videos.forEach(video => {
+
+        if (video !== currentVideo) {
+
+            video.pause();
+
+        }
+
+    });
+
+}
+
+videos.forEach(video => {
+
+    video.addEventListener("play", () => {
+
+        pauseOtherVideos(video);
+
+    });
+
+});
+    
+</script>
+>>>>>>> 5210df7c7eafea5af033eed8c69bae4f113da355:01 HTML/01 HTML level 02/03 Assignment Questions/Practice Q 01 .html
     </body>
 
 </html>
