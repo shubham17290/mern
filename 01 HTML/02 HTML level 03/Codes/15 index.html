@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>15 text area tag</title>
+    </head>
+
+    <body>
+
+        <form action="/server">
+
+            <input type="checkbox" id="age" name="age" value="Apple" />
+            <label for="age">I am 18+</label>
+            <div>
+                <input type="radio" name="fruit" id="Mango" value="Mango" />
+                <label for="Mango">Mango</label>
+
+                <input type="radio" name="fruit" id="Banana" value="Banana" />
+                <label for="Banana">Banana</label>
+
+                <input type="radio" name="fruit" id="Cherry" value="Cherry" />
+                <label for="Cherry">Cherry</label>
+
+            </div>
+            <br>
+
+            <div>
+                Choose Your subjects:
+                <input type="checkbox" id="math" name="subjects" value="math"
+                    value="math" />
+                <label for="math">math</label>
+                <input type="checkbox" id="science" name="subjects"
+                    value="science" value="sci" />
+                <label for="science">science</label>
+                <input type="checkbox" id="english" name="subjects"
+                    value="eng" />
+                <label for="english">english</label>
+
+            </div>
+
+            <div>
+                choose your profession
+                <select name="profession" id="profession">
+                    <option>Select your options </option>
+                    <option value="stu">Students</option>
+                    <option value="dev">Developer</option>
+                    <option value="buss">Businessman</option>
+
+                </select>
+
+            </div>
+            <!-- Rage attribute used here: -->
+            <label for="vol"> Select your option :</label>
+            <input type="range" id="vol" min="0" max="100" name="volume"
+                step="5" value="40">
+            <br>
+            <label for="feedback">Please give your valuable feedback: </label>
+            <!-- default size of the text area is Two rows and two columns  -->
+            <textarea name="feedback" id="feedback" rows="5" cols="50"></textarea>
+            <button>Submit</button>
+
+        </form>
+
+    </body>
+
+</html>
