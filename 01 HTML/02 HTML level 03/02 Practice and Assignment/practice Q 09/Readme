@@ -1,0 +1,57 @@
+table
+
+│
+
+├── tr
+
+│      └── th colspan="4"
+
+│
+
+├── tr
+
+│      ├── rowspan="6"
+
+│      ├── rowspan="2"
+
+│      └── colspan="2"
+
+│
+
+├── tr
+
+│      ├── City
+
+│      └── House
+
+│
+
+├── tr
+
+│      ├── A
+
+│      ├── Delhi
+
+│      └── 1
+
+│
+
+├── tr
+
+│      ├── B
+
+│      ├── Mumbai
+
+│      └── 2
+
+│
+
+├── tr
+
+│      ├── C
+
+│      ├── Kolkata
+
+│      └── 3
+
+│

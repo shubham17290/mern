@@ -1,0 +1,55 @@
+User Opens Page
+
+        │
+
+        ▼
+
+<form>
+
+        │
+
+        ▼
+
+Enter Name
+
+        │
+
+        ▼
+
+Select Gender
+
+        │
+
+        ▼
+
+Choose Country
+
+        │
+
+        ▼
+
+Write Message
+
+        │
+
+        ▼
+
+Tick Subscribe (Optional)
+
+        │
+
+        ▼
+
+Click Submit
+
+        │
+
+        ▼
+
+Browser Validation
+
+        │
+
+        ▼
+
+Backend Receives Data
