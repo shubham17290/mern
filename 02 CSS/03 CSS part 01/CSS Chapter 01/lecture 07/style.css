@@ -1,0 +1,34 @@
+/* We let the browser keep its default root size (usually 16px) */
+html {
+    font-size: 100%; 
+    
+}
+
+/* Base text size using rem (1rem = 16px) */
+body {
+    font-size: 1rem; 
+    line-height: 1.6;
+}
+
+/* Headings scaled up using rem */
+h1 {
+    font-size: 2.5rem; /* 2.5 * 16px = 40px */
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.8rem; /* 1.8 * 16px = ~28.8px */
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.25rem; /* 1.25 * 16px = 20px */
+    margin-bottom: 0.5rem;
+}
+
+/* Paragraphs stay easily readable */
+p {
+    font-size: 1.1rem; /* Slightly larger than base: 17.6px */
+    margin-bottom: 1rem;
+   font-weight: bold;
+}

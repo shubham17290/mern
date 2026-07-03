@@ -1,0 +1,19 @@
+# Iron Man Biography Page 🦸‍♂️
+
+A responsive, well-structured webpage detailing the biography and history of Marvel's Iron Man. This project features a clean UI and an eye-health-optimized Light/Dark mode toggle.
+
+## Features
+* **Eye-Friendly Theme Toggle:** Built with CSS variables to ensure transitions are smooth and colors are soft (warm off-white for day, deep slate for night) to reduce digital eye strain.
+* **Responsive Design:** Automatically adjusts padding and font sizes for mobile devices.
+* **Separation of Concerns:** Clean codebase with distinct files for Structure (HTML), Styling (CSS), and Logic (JavaScript).
+
+## File Structure
+* `index.html` - The main content and structure of the page.
+* `style.css` - All styling rules and theme color variables.
+* `script.js` - The logic for the Day/Night mode toggle button.
+
+## How to Run
+1. Download or clone this repository.
+2. Ensure all three files (`index.html`, `style.css`, `script.js`) are in the same folder.
+3. Open `index.html` in any modern web browser (Chrome, Firefox, Safari, Edge).
+4. Click the "Night Mode" / "Day Mode" button to see the theme transition!

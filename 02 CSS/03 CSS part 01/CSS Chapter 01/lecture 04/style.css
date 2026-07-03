@@ -1,7 +1,5 @@
-h2{
-    
-     color:green;/* Color name system */
-     color: rgb(blue,0,0);/* Color name system */
-     color: #ffff00;;/* Color name system */
-
+h2 {
+  /* color:green;/* Color name system */
+  /* color: rgb(blue,0,0);rgb name system */
+  color: #ffffff; /* Hexadecimal name system */
 }

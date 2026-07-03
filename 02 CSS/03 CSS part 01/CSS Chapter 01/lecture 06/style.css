@@ -1,0 +1,159 @@
+/* 1. Define Theme Colors (Perfected & Professional) */
+:root {
+    /* ☀️ Day Mode: Crisp, clean white like a modern tech blog */
+    --bg-color: #ffffff;
+    --text-main: #334155; 
+    --text-heading: #0f172a; 
+    --text-subheading: #475569;
+    --divider-color: #e2e8f0; 
+    --link-color: #2563eb; 
+    --link-hover: #1d4ed8;
+    --btn-bg: #f8fafc;
+    --btn-border: #cbd5e1;
+    --btn-text: #0f172a;
+}
+
+.dark-mode {
+    /* 🌙 Night Mode: Sleek, deep gray/black like premium dark modes */
+    --bg-color: #121212;
+    --text-main: #a1a1aa; 
+    --text-heading: #f9fafb; 
+    --text-subheading: #e5e7eb;
+    --divider-color: #374151; 
+    --link-color: #60a5fa; 
+    --link-hover: #93c5fd;
+    --btn-bg: #1f2937;
+    --btn-border: #4b5563;
+    --btn-text: #f9fafb;
+}
+
+.eye-care-mode {
+    /* 🌿 Eye Care Mode: Warm Sepia + Nature Green accents for zero eye strain */
+    --bg-color: #fbf0d9; 
+    --text-main: #4a3f35; 
+    --text-heading: #2c2115; 
+    --text-subheading: #5f4b32;
+    --divider-color: #e3d1b5; 
+    --link-color: #2e7d32; /* Nature Green */
+    --link-hover: #1b5e20;
+    --btn-bg: #dcedc8; /* Soft green for buttons */
+    --btn-border: #aed581; 
+    --btn-text: #2e7d32;
+}
+
+/* 2. Base Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    
+    /* Variables apply here */
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    
+    line-height: 1.6; 
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    
+    /* Smooth transition when clicking the buttons */
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* 3. Theme Button Styling */
+.theme-switch-wrapper {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 10px; /* Space between the 3 buttons */
+    flex-wrap: wrap; /* Prevents buttons from overflowing on small screens */
+    margin-bottom: 2rem;
+}
+
+.theme-btn {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: 1px solid var(--btn-border); /* Clean border added */
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    opacity: 0.8;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* 4. Typography & Headings */
+h1, h2, h3 {
+    color: var(--text-heading);
+    font-weight: 700;
+    transition: color 0.4s ease;
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: -0.05rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-subheading);
+}
+
+/* 5. Paragraphs */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+}
+
+/* 6. Horizontal Rules (Dividers) */
+hr {
+    border: none;
+    border-top: 2px solid var(--divider-color);
+    margin: 1rem 0 2rem 0;
+    transition: border-color 0.4s ease;
+}
+
+/* 7. Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.4s ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* 8. Mobile Responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 1.5rem 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .theme-switch-wrapper {
+        justify-content: center; /* Centers buttons on mobile */
+    }
+}
