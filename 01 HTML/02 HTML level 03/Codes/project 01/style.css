@@ -1,0 +1,592 @@
+/* Flux Dashboard - Animated Glassmorphism CSS */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================
+   THEME VARIABLES - CSS CUSTOM PROPERTIES
+   ============================================ */
+
+:root {
+    /* Light Mode (Default) */
+    --bg-primary: #f5f7fa;
+    --bg-secondary: #ffffff;
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --accent-color: #667eea;
+    --accent-secondary: #764ba2;
+    --table-bg: rgba(255, 255, 255, 0.9);
+    --table-header-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --table-border: rgba(0, 0, 0, 0.1);
+    --table-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --row-bg: rgba(255, 255, 255, 0.5);
+    --row-hover-bg: rgba(102, 126, 234, 0.1);
+    --text-shadow: none;
+    --title-color: #2d3748;
+    --title-shadow: none;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --bg-primary: #1a202c;
+    --bg-secondary: #2d3748;
+    --text-primary: #e2e8f0;
+    --text-secondary: #cbd5e0;
+    --accent-color: #667eea;
+    --accent-secondary: #764ba2;
+    --table-bg: rgba(45, 55, 72, 0.9);
+    --table-header-bg: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    --table-border: rgba(255, 255, 255, 0.1);
+    --table-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --row-bg: rgba(26, 32, 44, 0.5);
+    --row-hover-bg: rgba(102, 126, 234, 0.2);
+    --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --title-color: #e2e8f0;
+    --title-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Cyberpunk Mode */
+[data-theme="cyberpunk"] {
+    --bg-primary: #0a0e27;
+    --bg-secondary: #1a1f3a;
+    --text-primary: #00ffff;
+    --text-secondary: #ff00ff;
+    --accent-color: #00ffff;
+    --accent-secondary: #ff00ff;
+    --table-bg: rgba(10, 14, 39, 0.9);
+    --table-header-bg: linear-gradient(135deg, #00ffff 0%, #ff00ff 100%);
+    --table-border: rgba(0, 255, 255, 0.3);
+    --table-shadow: 0 0 30px rgba(0, 255, 255, 0.5), 0 0 60px rgba(255, 0, 255, 0.3);
+    --row-bg: rgba(26, 31, 58, 0.5);
+    --row-hover-bg: rgba(0, 255, 255, 0.15);
+    --text-shadow: 0 0 10px currentColor;
+    --title-color: #00ffff;
+    --title-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(255, 0, 255, 0.5);
+}
+
+/* Sepia Mode */
+[data-theme="sepia"] {
+    --bg-primary: #f4ecd8;
+    --bg-secondary: #faf6ed;
+    --text-primary: #5b4636;
+    --text-secondary: #7a6555;
+    --accent-color: #8b7355;
+    --accent-secondary: #a08060;
+    --table-bg: rgba(250, 246, 237, 0.9);
+    --table-header-bg: linear-gradient(135deg, #8b7355 0%, #a08060 100%);
+    --table-border: rgba(139, 115, 85, 0.2);
+    --table-shadow: 0 8px 32px rgba(91, 70, 54, 0.15);
+    --row-bg: rgba(244, 236, 216, 0.5);
+    --row-hover-bg: rgba(139, 115, 85, 0.15);
+    --text-shadow: none;
+    --title-color: #5b4636;
+    --title-shadow: none;
+}
+
+
+/* ============================================
+   KEYFRAME ANIMATIONS - DEFINED FIRST
+   ============================================ */
+
+/* Animated Background Gradient */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Floating Orbs Animation */
+@keyframes orbFloat {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(30px, -30px) scale(1.1);
+    }
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+}
+
+/* Glass Fade In Animation */
+@keyframes glassFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+        backdrop-filter: blur(0px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        backdrop-filter: blur(20px);
+    }
+}
+
+/* Shimmer Effect for Header */
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Slide In From Top Animation */
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glass Row Fade In Animation */
+@keyframes glassRowFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+        background: rgba(255, 255, 255, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        background: rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* Border Glow Animation */
+@keyframes borderGlow {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+    }
+}
+
+/* Loading State Animation */
+@keyframes glassLoading {
+    0% {
+        backdrop-filter: blur(0px);
+        opacity: 0.5;
+    }
+    50% {
+        backdrop-filter: blur(20px);
+        opacity: 1;
+    }
+    100% {
+        backdrop-filter: blur(0px);
+        opacity: 0.5;
+    }
+}
+
+/* Ripple Effect Animation */
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.98);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ============================================
+   BODY & BACKGROUND STYLES
+   ============================================ */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-primary);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Floating Orbs Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(102, 126, 234, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(240, 147, 251, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(118, 75, 162, 0.3) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+    animation: orbFloat 20s ease-in-out infinite;
+    transition: opacity 0.3s ease;
+}
+
+/* ============================================
+   TABLE CONTAINER & TITLE
+   ============================================ */
+
+/* Table Container */
+.table-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 900px;
+    animation: glassFadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Table Title */
+.table-title {
+    color: var(--title-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: var(--title-shadow);
+    letter-spacing: 1px;
+    animation: slideInFromTop 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* ============================================
+   TABLE STYLES
+   ============================================ */
+
+/* Glassmorphism Table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: var(--table-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--table-shadow);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--table-border);
+    position: relative;
+    transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Glass Border Glow Effect */
+table::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #667eea);
+    background-size: 400% 400%;
+    border-radius: 22px;
+    z-index: -1;
+    opacity: 0;
+    animation: borderGlow 8s ease infinite, gradientShift 15s ease infinite;
+    transition: opacity 0.4s ease;
+}
+
+table:hover::before {
+    opacity: 0.6;
+}
+
+/* Table Header Row - Glass Style */
+thead tr {
+    background: var(--table-header-bg);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease;
+}
+
+tr:first-child::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: shimmer 3s infinite;
+}
+
+/* Table Header Cells */
+th {
+    padding: 25px 30px;
+    text-align: left;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Table Data Cells - Glass Style */
+td {
+    padding: 25px 30px;
+    text-align: left;
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 1px solid var(--table-border);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    text-shadow: var(--text-shadow);
+}
+
+/* Data Rows - Glass Effect */
+tbody tr {
+    background: var(--row-bg);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: glassRowFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) backwards;
+}
+
+tbody tr:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+tbody tr:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+tbody tr:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Hover Effect on Rows - Enhanced Glass */
+tr:hover {
+    transform: translateX(10px) scale(1.02);
+    background: var(--row-hover-bg);
+    box-shadow: 
+        0 10px 40px rgba(102, 126, 234, 0.3),
+        inset 0 1px 2px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+tr:hover td {
+    color: var(--text-primary);
+    padding-left: 35px;
+    text-shadow: var(--text-shadow);
+}
+
+/* Last Row - Remove Bottom Border */
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Ripple Effect on Click */
+tr:active {
+    animation: ripple 0.6s ease-out;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+        align-items: flex-start;
+        padding-top: 40px;
+    }
+
+    .table-container {
+        max-width: 100%;
+    }
+
+    table {
+        border-radius: 15px;
+    }
+
+    th, td {
+        padding: 20px 25px;
+        font-size: 14px;
+    }
+
+    th {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .table-title {
+        font-size: 2rem;
+    }
+
+    tr:hover {
+        transform: translateX(5px) scale(1.01);
+    }
+
+    tr:hover td {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        padding-top: 20px;
+    }
+
+    table {
+        border-radius: 12px;
+    }
+
+    th, td {
+        padding: 15px 20px;
+        font-size: 13px;
+    }
+
+    th {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+
+    .table-title {
+        font-size: 1.5rem;
+    }
+
+    tr:hover td {
+        padding-left: 25px;
+    }
+}
+
+/* ============================================
+   THEME SWITCHER UI
+   ============================================ */
+
+.theme-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--table-bg);
+    padding: 12px 20px;
+    border-radius: 50px;
+    box-shadow: var(--table-shadow);
+    border: 1px solid var(--table-border);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: all 0.3s ease;
+}
+
+.theme-label {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.theme-select {
+    padding: 8px 16px;
+    border: 2px solid var(--table-border);
+    border-radius: 25px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    min-width: 150px;
+}
+
+.theme-select:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.theme-select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.theme-select option {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 10px;
+}
+
+/* ============================================
+   GLOBAL UTILITIES
+   ============================================ */
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection Styling */
+::selection {
+    background: var(--accent-color);
+    color: #fff;
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease;
+}
+
+/* Custom Scrollbar - Glass Style */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--row-bg);
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--accent-secondary), var(--accent-color));
+}
