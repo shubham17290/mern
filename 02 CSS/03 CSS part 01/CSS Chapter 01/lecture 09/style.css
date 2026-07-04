@@ -1,0 +1,11 @@
+h1 {
+  font-family: league spartan; /* set the font-family to league spartan*/
+  color: #ffa511; /* set the color of text to  #ffa511 */
+  text-align: center; /* center align the text : text-align: tell your desired position for your text  */
+  font-size: 55px; /* make the text size 55px : font-weight: 10px (where 10 can be anynumber )*/
+  font-weight: 900; /*  & font-weight 900 : font-weight:number;*/
+  letter-spacing: 2px; /* set the spacing between letters to 2px : letter-spacing:2px (where X= numbere ); */
+  line-height: 1.5; /* Set the line height to 1.5x the normal value : line-height:1.5 ;*/
+  text-decoration: teal double underline; /* add a teal double underline : text-decoration: ;*/
+  text-transform: uppercase; /* uppercase all the letter only using the css(you can google it ) text attribute:-  text-transform: ; */
+}
