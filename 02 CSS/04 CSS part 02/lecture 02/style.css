@@ -1,0 +1,26 @@
+/* 1. Universal selector – font family for entire document */
+* {
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* 2. Element selector – text color for all <h1> headings */
+h1 {
+    color: #1b74e4;
+}
+
+/* 3. ID selector – search button background black, text white */
+#searchbtn {
+    background-color: black;
+    color: white;
+}
+
+/* 4. ID selectors – login and register buttons background aqua */
+/* #login,
+#register {
+  background-color: aqua;
+} */
+
+.userbtn {
+
+    background-color: aqua;
+}

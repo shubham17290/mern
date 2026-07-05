@@ -1,0 +1,6 @@
+h3{
+  background-color:blue; /*page will follow this last value */
+  
+}
+
+/*  cascading of CSS rule say's that : what comes in the last will consider as the finaL result on the web page */

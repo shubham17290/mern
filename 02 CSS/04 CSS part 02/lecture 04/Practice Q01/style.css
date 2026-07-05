@@ -1,0 +1,17 @@
+
+/* element selector */
+h1 {
+    color: pink;
+}
+/* this one have the highest priority and the output will have the Yellow color */
+/* Element's ID selector */
+#greet {
+    color : yellow;
+}
+
+/* this one is the class selector */
+.myClass {
+    color : brown;
+}
+
+/* Answer : YELLOW color{CSS S.P : 100} of the text will be there at the output  */

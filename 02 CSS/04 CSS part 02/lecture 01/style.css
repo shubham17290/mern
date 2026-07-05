@@ -1,0 +1,29 @@
+/* learning selectors */
+* {
+  font-family: "Courier New";
+}
+
+/* Element selector */
+
+h3 {
+  color: purple;
+}
+/* selecting multiple tags at the same time :  */
+
+h1,
+h3 {
+  color: #b92b27;
+}
+
+#login {
+  background-color: white;
+}
+#signup {
+  background-color: #b92b27;
+  color: white;
+}
+
+.upvote{
+    background-color: rgb(33, 88, 33);
+    color:aliceblue;
+}

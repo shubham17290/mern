@@ -1,0 +1,13 @@
+/*   CSS SP: 02 */
+div p { 
+  background-color: black;
+}
+
+.para{ /*   CSS SP: 10 */ 
+    background-color: blue;
+}
+/* CSS SP: 01 */
+p {
+    background-color: green;
+}
+/* Answer : Blue color{CSS S.P : 10} of the text will be there at the output  */

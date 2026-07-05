@@ -1,0 +1,23 @@
+div {
+
+background-color: lightgray;
+}
+form {
+    background-color: rgb(211, 79, 79);
+}
+input{
+    background-color : inherit;
+}
+
+
+button {
+    background-color : inherit;
+}
+
+p {
+    background-color: aqua;
+}
+
+button:hover{
+    background-color: goldenrod;
+}

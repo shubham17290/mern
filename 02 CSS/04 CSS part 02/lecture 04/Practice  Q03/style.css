@@ -1,0 +1,12 @@
+div.greetDiv .greet {
+    color : green;
+}
+.greetDiv p.greet {
+    color : blue;
+}
+
+.greetDiv .greet {
+    color: red;
+}
+
+/* Answer : Blue color{CSS S.P : 21} of the text will be there at the output , due to CSS specificity rule */

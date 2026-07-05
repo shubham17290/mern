@@ -1,0 +1,110 @@
+# 🎯 CSS Specificity Rules
+
+CSS **Specificity** is an algorithm used by the browser to determine **which CSS rule should be applied** when multiple selectors target the same HTML element.
+
+---
+
+# 📌 Specificity Priority
+
+```text
+Inline Style
+      ↓
+ID Selector
+      ↓
+Class Selector
+Attribute Selector
+Pseudo-class
+      ↓
+Element Selector
+Pseudo-element
+      ↓
+Universal Selector (*)
+```
+
+---
+
+# 📊 Specificity Score
+
+| Selector | Specificity Score |
+|-----------|-------------------|
+| Inline Style | (1,0,0,0) |
+| ID Selector | (0,1,0,0) |
+| Class Selector | (0,0,1,0) |
+| Attribute Selector | (0,0,1,0) |
+| Pseudo-class | (0,0,1,0) |
+| Element Selector | (0,0,0,1) |
+| Pseudo-element | (0,0,0,1) |
+| Universal Selector (`*`) | (0,0,0,0) |
+
+---
+
+# 🚀 Browser Decision Flow
+
+```text
+Find All Matching CSS Rules
+            │
+            ▼
+Calculate Specificity Score
+            │
+            ▼
+Compare Scores
+            │
+            ▼
+Highest Score Wins
+            │
+            ▼
+If Scores Are Equal
+            │
+            ▼
+Last Written Rule Wins
+```
+
+---
+
+# ⚡ Golden Rules
+
+✅ Inline styles have the highest specificity.
+
+✅ ID selectors override Class selectors.
+
+✅ Class selectors override Element selectors.
+
+✅ Element selectors override the Universal selector (`*`).
+
+✅ If two selectors have the same specificity, **the rule written last wins**.
+
+✅ `!important` overrides normal specificity (use it sparingly).
+
+---
+
+# 🏆 Specificity Order
+
+```text
+Inline Style
+      >
+ID Selector
+      >
+Class / Attribute / Pseudo-class
+      >
+Element / Pseudo-element
+      >
+Universal Selector (*)
+```
+
+---
+
+# 💡 Best Practices
+
+- Prefer **Class Selectors** for styling.
+- Avoid using **ID Selectors** for CSS.
+- Avoid using **Inline Styles** except for quick testing.
+- Do not overuse **`!important`**.
+- Keep selectors simple and maintainable.
+
+---
+
+# 🧠 Remember
+
+> **Higher Specificity Wins.**
+>
+> If the specificity is the same, **the last declared rule wins.**

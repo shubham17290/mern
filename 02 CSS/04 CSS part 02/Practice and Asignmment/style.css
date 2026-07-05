@@ -1,0 +1,54 @@
+#mainTopic {
+    color: blue;
+}
+
+* {
+    text-align: center;
+}
+
+/* Q3: Change font family of all heading tags */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Georgia;
+}
+
+.para {
+    color: white;
+    background-color: cornflowerblue;
+}
+
+/* Q5 : Select all buttons inside div */
+
+div button {
+    background-color: purple;
+    color: azure;
+}
+
+/* Q6 : Button Hover Effect */
+
+button:hover {
+    background-color: yellow;
+    color: blue;
+}
+
+/* Q7 : Select Odd Paragraphs */
+
+p:nth-of-type(odd) {
+    color: yellow;
+}
+
+/* Q8 : First Letter */
+h1::first-letter {
+    color: red;
+}
+
+/* Q9 : Checkbox Checked */
+
+input[type="checkbox"]:checked + label {
+    color: darkgreen;
+}

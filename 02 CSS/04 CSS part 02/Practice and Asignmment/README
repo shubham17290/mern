@@ -1,0 +1,281 @@
+# 🎨 CSS Selectors Practice Assignment
+
+This assignment is designed to strengthen the fundamentals of **CSS Selectors**, **Pseudo Classes**, **Pseudo Elements**, and **CSS Specificity**. It covers the most commonly used selectors in web development.
+
+---
+
+# 📚 Topics Covered
+
+- ID Selector (`#`)
+- Universal Selector (`*`)
+- Group Selector (`,`)
+- Class Selector (`.`)
+- Descendant Selector (` `)
+- Pseudo Class (`:hover`)
+- Structural Pseudo Class (`:nth-of-type()`)
+- Pseudo Element (`::first-letter`)
+- Adjacent Sibling Selector (`+`)
+- Checkbox State Selector (`:checked`)
+- CSS Specificity
+
+---
+
+# 📝 Practice Questions
+
+## ✅ Q1. ID Selector
+
+**Task**
+
+Give the `h1` heading a unique id `"mainTopic"` and set its color to **blue** using the **ID Selector**.
+
+### Concept
+
+- ID Selector
+- Unique Element Styling
+
+### Selector Used
+
+```css
+#mainTopic
+```
+
+---
+
+## ✅ Q2. Universal Selector
+
+**Task**
+
+Align all the text on the page to the center using the **Universal Selector**.
+
+### Concept
+
+- Universal Selector
+
+### Selector Used
+
+```css
+*
+```
+
+---
+
+## ✅ Q3. Group Selector
+
+**Task**
+
+Change the font family of all heading tags (`h1` to `h6`) to **Georgia**.
+
+### Concept
+
+- Group Selector
+
+### Selector Used
+
+```css
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+```
+
+---
+
+## ✅ Q4. Class Selector
+
+**Task**
+
+Change all paragraph text color to **white** and background color to **cornflowerblue** **without using the element selector (`p`)**.
+
+### Concept
+
+- Class Selector
+
+### Selector Used
+
+```css
+.para
+```
+
+---
+
+## ✅ Q5. Descendant Selector
+
+**Task**
+
+Select all buttons inside a `<div>` and change:
+
+- Background Color → Purple
+- Text Color → Azure
+
+### Concept
+
+- Descendant Selector
+
+### Selector Used
+
+```css
+div button
+```
+
+---
+
+## ✅ Q6. Hover Pseudo Class
+
+**Task**
+
+Change the button background color to **yellow** and text color to **blue** when the mouse hovers over it.
+
+### Concept
+
+- Pseudo Class
+
+### Selector Used
+
+```css
+button:hover
+```
+
+---
+
+## ✅ Q7. Structural Pseudo Class
+
+**Task**
+
+Change the color of every **odd-numbered paragraph** to **yellow**.
+
+### Concept
+
+- `:nth-of-type()`
+
+### Selector Used
+
+```css
+p:nth-of-type(odd)
+```
+
+---
+
+## ✅ Q8. Pseudo Element
+
+**Task**
+
+Change the **first letter** of the `h1` heading to **red**.
+
+### Concept
+
+- Pseudo Element
+
+### Selector Used
+
+```css
+h1::first-letter
+```
+
+---
+
+## ✅ Q9. Adjacent Sibling Selector
+
+**Task**
+
+When the checkbox is checked, change the corresponding label color to **dark green**.
+
+### Concept
+
+- Adjacent Sibling Selector
+- `:checked`
+
+### Selector Used
+
+```css
+input[type="checkbox"]:checked + label
+```
+
+---
+
+## ✅ Q10. CSS Specificity
+
+**Task**
+
+Arrange the following selectors from **least specific** to **most specific**.
+
+### Given Selectors
+
+```css
+h1
+.main
+div .main
+#mainContent
+```
+
+### Correct Order
+
+```text
+h1
+↓
+.main
+↓
+div .main
+↓
+#mainContent
+```
+
+### Specificity Scores
+
+| Selector | Specificity |
+|----------|-------------|
+| `h1` | (0,0,0,1) |
+| `.main` | (0,0,1,0) |
+| `div .main` | (0,0,1,1) |
+| `#mainContent` | (0,1,0,0) |
+
+---
+
+# 🎯 CSS Selectors Learned
+
+| Selector | Example |
+|----------|---------|
+| Universal Selector | `*` |
+| Element Selector | `p` |
+| ID Selector | `#mainTopic` |
+| Class Selector | `.para` |
+| Group Selector | `h1, h2, h3` |
+| Descendant Selector | `div button` |
+| Adjacent Sibling Selector | `input + label` |
+| Pseudo Class | `:hover` |
+| Structural Pseudo Class | `:nth-of-type(odd)` |
+| Pseudo Element | `::first-letter` |
+
+---
+
+# 🧠 Key Takeaways
+
+- ID Selectors have higher specificity than Class Selectors.
+- Class Selectors have higher specificity than Element Selectors.
+- Universal Selector selects every element.
+- Descendant Selectors target nested elements.
+- Pseudo Classes represent an element's **state**.
+- Pseudo Elements style **specific parts** of an element.
+- CSS Specificity determines which rule is applied when multiple rules target the same element.
+
+---
+
+# 🚀 Learning Outcome
+
+After completing this assignment, you will understand:
+
+- ✅ Basic CSS Selectors
+- ✅ Advanced Selectors
+- ✅ Pseudo Classes
+- ✅ Pseudo Elements
+- ✅ CSS Specificity
+- ✅ Real-world Selector Usage
+
+---
+
+## 👨‍💻 Author
+
+**Shubham Maurya**
+
+Learning **Frontend Development** with a focus on writing clean, maintainable, and industry-standard HTML & CSS.

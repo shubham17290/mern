@@ -1,0 +1,132 @@
+/* learning selectors */
+* {
+  font-family: "Courier New";
+}
+
+/* Element selector */
+
+h3 {
+  color: purple;
+}
+
+/* selecting multiple tags at the same time :  */
+
+h1,
+h3 {
+  color: #b92b27;
+}
+/*  tHSE both two css sign ans register , have highest specificity */
+#login {
+  background-color: white;
+}
+
+#signup {
+  background-color: #b92b27;
+  color: white;
+}
+
+.upvote {
+  background-color: rgb(33, 88, 33);
+  color: aliceblue;
+}
+
+/* descendant selector */
+
+.post a {
+  color: purple;
+  background-color: yellow;
+}
+
+/*  4 levels of descendant selector  */
+nav ul li a {
+  color: hotpink;
+}
+
+/*selector type : 06 Adjacent selector 
+
+
+
+*/
+h3 {
+  text-align: center;
+}
+
+p + h3 {
+  /*This is the    Adjacent combinator coloring  */
+  text-decoration: underline;
+}
+
+.upvote + button {
+  background-color: cornflowerblue;
+  color: blue;
+}
+
+div > input {
+  background-color: darkgray;
+}
+
+input[type="text"] {
+  color: green;
+}
+
+input[type="password"] {
+  color: red;
+  background-color: ghostwhite;
+}
+
+/* Practice question 01 : Set color for paragraphs inside divs with id="myID" to green   */
+/* approach no : 1 */
+div[id="myID"] p {
+  color: green;
+}
+
+/* approach no : 1 */
+#myID {
+  color: green;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+ 
+h3:hover {
+  text-decoration: overline;
+}
+button:active {
+  background-color: blue;
+  color: red;
+}
+p:active {
+  font-weight: bold;
+  color: green;
+}
+input[type="radio"]:checked + label{
+  color: red;
+  font-weight: bold;
+}
+
+div:nth-of-type(2n){
+
+background-color:blanchedalmond;
+
+}
+h1::first-letter{
+  color:rgb(21, 20, 20);
+}
+p::first-line{
+  color: purple;
+
+}
+p::selection{
+  background-color:pink;
+}
+h3{
+  background-color:yellow;
+
+}
+h3{
+  background-color:rgb(101, 221, 9);
+  
+}
+
