@@ -1,0 +1,30 @@
+/* div {
+  height: 200px;
+  width: 200px;
+  background-color: greenyellow;
+  border: 2px solid black;
+  margin: 5px;
+  display: inline-block; /*wil shoe black lines , 
+
+#third{
+    display: none;
+} */
+
+h1 {
+    border: 2px solid black;
+    width: 33.33%;
+}
+
+#outer {
+    height: 400px;
+    width: 400px;
+    background-color: aqua;
+    margin: 50px;
+}
+
+#inner {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    margin-left: 10%;
+}

@@ -1,0 +1,26 @@
+div {
+  height: 200px;
+  width: 500px;
+  background-color: aqua;
+  border: 5px solid black;
+  border-radius: 10px;
+  padding-top: 10px;
+  margin-bottom : 20px
+}
+
+h1 {
+  border: 2px dashed green;
+}
+
+button {
+  border: solid black;
+  /* border-radius: 10 px;
+    padding-left: 25px;
+    padding-right: 25px; */
+  /* padding : 50 px;
+    padding : 10px 10 px 30px */
+  padding: 10px 20px 30px 40px;
+  background-color: red;
+  margin-bottom : 20px ;
+}
+/*  Task app all rule of the industry fav : box model properties : */
