@@ -1,0 +1,13 @@
+/*  lets understand the alpha channel property of the css */
+div {
+  height: 200px;
+  width: 200px;
+  background-color:green;
+   
+  ; /*here the a is alpha channel and it tells what is the opacity of the color */
+}
+/*  lets understand the opacity property of the css */
+#opacity{
+    background-color:rgba(255, 85, 0, 0.829);
+    opacity: 0.9;
+}
