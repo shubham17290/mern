@@ -1,0 +1,12 @@
+div {
+  width: 600px;
+  height: 900px;
+  text-align: center;
+  color: white;
+  background-color: green;
+  margin: 10px auto;
+  box-shadow: 20px 20px 18px black;
+  background-image: url(blake-verdoorn-cssvEZacHvQ-unsplash.jpg);
+background-size: cover; 
+
+}

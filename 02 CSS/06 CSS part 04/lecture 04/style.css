@@ -1,0 +1,48 @@
+/*  using the css pallets from online resources  */
+
+section {
+    margin-top: 100px;
+}
+
+div {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: #7aa874;
+    border: 2px solid black;
+    margin: 10px;
+    margin: 10px auto;
+}
+
+div:nth-of-type(2n) {
+    background-color: #f7db6a;
+}
+
+div:nth-of-type(3n) {
+    background-color: #ebb02d;
+}
+
+/*  transform starting from here */
+#one {
+    transform: rotate(180deg);
+}
+
+/*  CSS Scale property  */
+
+#two {
+    /*  take input in (x,y) 2D plane logic  */
+    transform: scale(0.5);
+}
+
+#three {
+    transform: translateX(-100px);
+}
+
+/*  skew property */
+#four {
+    transform: skew(30deg);
+}
+
+#five {
+    transform: rotate(30deg) translateX(150px);
+}
