@@ -1,0 +1,49 @@
+/* Remove Default Margin */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: blue;
+}
+
+/* Face */
+.face {
+  width: 300px;
+  height: 300px;
+  background-color: #ffd93d;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* Common Eye Styling */
+.eye {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 80px;
+}
+
+/* Left Eye */
+.left-eye {
+  left: 70px;
+}
+
+/* Right Eye */
+.right-eye {
+  right: 70px;
+}
+
+/* Smile */
+.mouth {
+  width: 150px;
+  height: 70px;
+  border-bottom: 8px solid black;
+  border-radius: 0 0 80px 80px;
+  position: absolute;
+  left: 75px;
+  top: 160px;
+}
