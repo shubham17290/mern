@@ -1,0 +1,59 @@
+/* Remove Default Margin & Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Center the Container */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+/* Flex Container */
+.container {
+    width: 900px;
+    height: 400px;
+    border: 3px solid black;
+
+    display: flex;
+}
+
+/* Common Box Styling */
+.box {
+    width: 100px;
+    height: 100px;
+
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Individual Box Colors */
+.box1 {
+    background-color: crimson;
+}
+
+.box2 {
+    background-color: royalblue;
+}
+
+.box3 {
+    background-color: seagreen;
+}
+
+.box4 {
+    background-color: orange;
+}
+
+.box5 {
+    background-color: purple;
+}
