@@ -1,0 +1,40 @@
+.box {
+  height: 100px;
+  width: 300px;
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center;
+  animation-name: widthAnimate;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+  transition-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes fontAnimation {
+  from {
+    font-size: 20px;
+  }
+  to {
+    font-size: 30px;
+  }
+}
+@keyframes colorAnimate {
+  from {
+    background-color: green;
+  }
+  to {
+    background-color: blue;
+  }
+}
+
+@keyframes widthAnimate {
+  from {
+    width: 80px;
+  }
+  to {
+    width: 900px;
+  }
+}
