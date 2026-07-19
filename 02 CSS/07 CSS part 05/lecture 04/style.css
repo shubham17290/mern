@@ -1,0 +1,43 @@
+#container {
+  height: 600px;
+  width: 60%;
+  background-color: azure;
+  margin: 10px auto;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#org {
+  align-self: flex-start;
+
+  /*
+    flex-grow: 3;
+    flex-shrink: 1;
+    flex-basis: 50px;
+  */
+  flex: 3 1 50px;
+}
+
+#blue {
+  /*
+    flex-grow: 0; (Using 0 so it doesn't grow, based on your active code)
+    flex-shrink: 2;
+    flex-basis: 400px;
+  */
+  flex: 0 2 400px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#container div {
+  height: 100px;
+  width: 300px;
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+}

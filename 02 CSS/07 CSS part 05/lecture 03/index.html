@@ -1,22 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    <h1>Flexbox Playground</h1>
-    <div id="container">
-        <div style="background-color: #9400d3">violet</div>
-        <div style="background-color: #4b0082">indigo</div>
-        <div style="background-color: #0000ff">blue</div>
-        <div style="background-color: #00ff00">green</div>
-        <div style="background-color: #ffff00">yellow</div>
-        <div style="background-color: #ff7f00">orange</div>
-        <div style="background-color: #ff0000">red</div>
-    </div>
-</body>
-</html>
+#container {
+  height: 600px;
+  width: 60%;
+  background-color: azure;
+  margin: 10px auto;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; /* Changed from align-self to align-items to affect the children */
+}
+
+#org {
+  align-self: flex-start; /* This correctly overrides align-items for this specific block */
+  flex-shrink: 1;
+}
+
+#blue {
+  flex-basis: 400px;
+  flex-shrink: 2;
+}
+
+h1 {
+  text-align: center;
+}
+
+#container div {
+  height: 100px;
+  width: 300px;
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+}
