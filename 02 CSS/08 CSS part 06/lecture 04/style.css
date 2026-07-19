@@ -1,0 +1,26 @@
+.box {
+  height: 100px;
+  width: 300px;
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center;
+
+  animation: widthAnimate 3s ease-in 0s infinite alternate;
+}
+
+@keyframes widthAnimate {
+  /*  way to add the states it can be any different stages  */
+  0% {
+    width: 80px;
+    background-color: blue;
+  }
+  50% {
+    background-color: green;
+  }
+  100% {
+    width: 900px;
+    background-color: yellow;
+    border-radius: 15px;
+  }
+}
