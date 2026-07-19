@@ -1,0 +1,62 @@
+/* Basic page reset for centering */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: serif; /* The letters in the image use a serif font */
+}
+
+/* --- THE FLEX CONTAINER --- */
+.container {
+  /* 1. Turn the container into a flexbox */
+  display: flex;
+
+  /* 2. THE SECRET INGREDIENT: flex-wrap
+     This tells the browser: "If the items don't fit on one row,
+     wrap them down to the next line." Without this, all 9 boxes
+     would squish together on a single horizontal row. */
+  flex-wrap: wrap;
+
+  /* 3. Spacing: 'gap' creates equal spacing between rows and columns */
+  gap: 20px;
+
+  /* 4. Alignment: Center the grid of items inside the container */
+  justify-content: center;
+
+  /* Container visual styles based on the image */
+  width: 400px; /* Fixed width forces the items to wrap after 3 boxes */
+  padding: 20px;
+  border: 3px solid #66b2b2; /* Teal border */
+  border-radius: 12px;
+  background-color: white;
+}
+
+/* --- THE FLEX ITEMS --- */
+.box {
+  /* Sizing the boxes so exactly 3 fit per row (3 * 100px + gaps = fits in 400px) */
+  width: 100px;
+  height: 110px;
+
+  /* Visual styles for the grey boxes */
+  background-color: #888888;
+  border: 2px solid #222;
+  border-radius: 10px;
+
+  /* 5. FLEXBOX INCEPTION!
+     We can make the flex items behave as flex containers themselves
+     to easily position the text inside them. */
+  display: flex;
+
+  /* Center the letter horizontally */
+  justify-content: center;
+
+  /* Align the letter to the top (as seen in the image) rather than center */
+  align-items: flex-start;
+
+  /* Typography */
+  font-size: 3.5rem;
+  padding-top: 5px; /* Push the text down just a tiny bit from the top edge */
+  box-sizing: border-box; /* Ensures the padding doesn't break our 110px height */
+}

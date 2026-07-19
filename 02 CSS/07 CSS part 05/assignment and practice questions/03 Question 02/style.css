@@ -1,0 +1,47 @@
+/* Basic page reset to center the layout on the screen */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: serif;
+}
+
+/* --- THE FLEX CONTAINER --- */
+.navbar {
+  /* Turn the container into a flexbox */
+  display: flex;
+
+  /* Align items vertically in the center of the cross-axis */
+  align-items: center;
+
+  /* Push items towards the start of the main axis (left side) */
+  justify-content: flex-start;
+
+  /* Apply required dimensions */
+  width: 900px;
+  height: 50px;
+
+  /* Visual styling to match the image */
+  background-color: #f3c2cb; /* Light pink background */
+  border: 2px solid #6eb9b9; /* Teal border */
+  border-radius: 8px; /* Slightly rounded corners */
+  padding-left: 10px; /* Slight offset from the left edge */
+  box-sizing: border-box; /* Ensures padding doesn't increase total width */
+}
+
+/* --- THE FLEX ITEMS (CHILDREN) --- */
+.nav-item {
+  /* Apply required dimensions */
+  width: 80px;
+  height: 50px;
+
+  /* Apply required font size */
+  font-size: 24px;
+
+  /* Use flexbox on the children to perfectly center the text vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
