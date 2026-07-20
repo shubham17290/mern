@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  /* Divide the grid into 12 rows & 12 columns */
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 10px;
+  height: 80vh;
+}
+
+.grid-container > div {
+  background-color: #ffc2d1;
+  padding: 10px;
+  /* Prevents the text from stretching the grid on smaller screens */
+  word-break: break-word;
+}
+
+/* --- BASE LAYOUT (Desktop - > 720px) --- */
+.header {
+  grid-column: 1 / span 12;
+  grid-row: 1 / span 1;
+}
+
+.sidebar {
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 10;
+}
+
+.navigation {
+  grid-column: 4 / span 6;
+  grid-row: 2 / span 1;
+}
+
+.main {
+  grid-column: 4 / span 6;
+  grid-row: 3 / span 9;
+}
+
+.ads {
+  grid-column: 10 / span 3;
+  grid-row: 2 / span 10;
+}
+
+.footer {
+  grid-column: 1 / span 12;
+  grid-row: 12 / span 1;
+}
+
+/* --- MOBILE LAYOUT (Viewports Below 720px) --- */
+@media (max-width: 720px) {
+  /* Header stays the same */
+  .header {
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 1;
+  }
+
+  /* Navigation spans across the entire 2nd row */
+  .navigation {
+    grid-column: 1 / span 12;
+    grid-row: 2 / span 1;
+  }
+
+  /* Sidebar drops to the 3rd row, taking 3 columns and 9 rows */
+  .sidebar {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 9;
+  }
+
+  /* Main stays on the 3rd row but now takes up 9 columns */
+  .main {
+    grid-column: 4 / span 9;
+    grid-row: 3 / span 9;
+  }
+
+  /* Ads drop down to the 12th row, taking 3 columns */
+  .ads {
+    grid-column: 1 / span 3;
+    grid-row: 12 / span 1;
+  }
+
+  /* Footer sits on the 12th row next to the ads, taking 9 columns */
+  .footer {
+    grid-column: 4 / span 9;
+    grid-row: 12 / span 1;
+  }
+}
