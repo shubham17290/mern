@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Project</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rubik+Maze&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main_box">
+      <!-- Hidden Checkbox for Toggle Logic -->
+      <input type="checkbox" id="check" />
+
+      <!-- Open Sidebar Button -->
+      <div class="btn_one">
+        <label for="check">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <div class="sidebar_menu">
+        <div class="logo">
+          <a href="#">Shubham's Gallery</a>
+        </div>
+
+        <!-- Close Sidebar Button -->
+        <div class="btn_two">
+          <label for="check">
+            <i class="fa-solid fa-xmark"></i>
+          </label>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="#"><i class="fa-solid fa-image"></i>Gallery</a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                >Shortcuts</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-photo-film"></i>Exhibits</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-calendar-days"></i>Events</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-store"></i>Store</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-phone"></i>Contact</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-regular fa-comments"></i>Feedback</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="social_media">
+          <ul>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
