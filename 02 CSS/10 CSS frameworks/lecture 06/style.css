@@ -1,0 +1,174 @@
+/* =========================================
+   ROOT VARIABLES & GLOBAL SETUP
+   ========================================= */
+:root {
+  --primary-color: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  /* Dark space gradient from your original code */
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  color: #ffffff; /* White text for contrast */
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden; /* Prevents horizontal scrollbar from stars */
+}
+
+/* =========================================
+   GLASSMORPHISM NAVBAR (Sticking to top)
+   ========================================= */
+.navbar {
+  background: rgba(13, 29, 49, 0.6) !important; /* Semi-transparent dark */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand, .nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important; /* Bootstrap primary blue on hover */
+}
+
+.nav-link.disabled {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Inverts the hamburger menu icon to white */
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* =========================================
+   MAIN CONTENT CONTAINER
+   ========================================= */
+.container {
+  position: relative;
+  z-index: 10; /* Keeps content above the stars */
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  margin-top: 1rem; /* Adjusts spacing below the nav */
+}
+
+h2 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  background: -webkit-linear-gradient(#fff, #a5b4fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.para p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #e2e8f0;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Make buttons pop a bit more against the dark background */
+.btn {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255,255,255,0.1);
+}
+
+/* =========================================
+   SHOOTING STARS ANIMATION
+   ========================================= */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  transform: rotate(-45deg);
+  z-index: -1; /* Stays strictly in the background */
+  pointer-events: none; /* Prevents stars from blocking clicks */
+}
+
+.star {
+  --star-color: var(--primary-color);
+  --star-tail-height: 2px;
+  --star-width: calc(var(--star-tail-length) / 6);
+  --tail-fade-duration: var(--fall-duration);
+
+  position: absolute;
+  top: var(--top-offset);
+  left: 0;
+  width: var(--star-tail-length);
+  height: var(--star-tail-height);
+  color: var(--star-color);
+  background: linear-gradient(45deg, currentColor, transparent);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 6px currentColor);
+  transform: translate3d(104em, 0, 0);
+  animation: fall var(--fall-duration) var(--fall-delay) linear infinite,
+             tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+}
+
+/* Mobile performance fallback */
+@media screen and (max-width: 750px) {
+  .star {
+    animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
+  }
+  .container {
+    padding: 1.5rem; /* Less padding on mobile */
+  }
+}
+
+.star::before,
+.star::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: calc(var(--star-width) / -2);
+  width: var(--star-width);
+  height: 100%;
+  background: linear-gradient(45deg, transparent, currentColor, transparent);
+  border-radius: inherit;
+  animation: blink 2s linear infinite;
+}
+
+.star::before {
+  transform: rotate(45deg);
+}
+
+.star::after {
+  transform: rotate(-45deg);
+}
+
+@keyframes fall {
+  to {
+    transform: translate3d(-30em, 0, 0);
+  }
+}
+
+@keyframes tail-fade {
+  0%, 50% { width: var(--star-tail-length); opacity: 1; }
+  70%, 80% { width: 0; opacity: 0.4; }
+  100% { width: 0; opacity: 0; }
+}
+
+@keyframes blink {
+  50% { opacity: 0.6; }
+}
