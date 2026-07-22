@@ -1,0 +1,4 @@
+.center-my-input {
+  max-width: 500px; /* Constrain the width */
+  margin: 0 auto; /* Center it horizontally */
+}
