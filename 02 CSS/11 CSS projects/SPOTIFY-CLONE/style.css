@@ -1,0 +1,67 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  /*  this will give you the scroll bar in case of the overflow of the content condition */
+}
+.main {
+  display: flex;
+  height: 100vh;
+}
+
+/* Side-bar CSS */
+.sidebar {
+  background-color: #0de122;
+  width: 340px;
+  border-radius: 1rem;
+  /* 1rem= 16px */
+}
+
+/* Main Content CSS */
+.main-content {
+  background-color: #121212;
+  flex: 1;
+  border-radius: 1rem;
+  overflow: auto;
+}
+
+/* Music player CSS  */
+.music-player {
+  background-color: black;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 72px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav {
+  background-color: #121212;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+  padding: 0.5rem 0.75rem;
+}
+.nav-option {
+  line-height: 2.5rem;
+  opacity: 0.7;
+  padding: 0.5rem 0.75rem;
+}
+.nav-option:hover {
+  opacity: 1;
+}
+
+.nav-option i {
+  font-size: 1.25 rem;
+}
+.nav-option a {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
