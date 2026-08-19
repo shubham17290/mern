@@ -21,28 +21,150 @@
       rel="stylesheet" />
   </head>
   <body>
- <body>
     <div class="main">
-        <div class="sidebar">
-            <div class="nav">
-                <div class="nav-option">
-                    <i class="fa-solid fa-house"></i>
-                    <a href="#">Home</a>
-                </div>
+      <!-- ============ SIDEBAR ============ -->
+      <div class="sidebar">
+        <div class="nav">
+          <div class="nav-option">
+            <i class="fa-solid fa-house"></i>
+            <a href="#">Home</a>
+          </div>
 
-                <div class="nav-option">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <a href="#">Search</a>
-                </div>
-            </div>
-
-            <div class="library"></div>
+          <div class="nav-option">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <a href="#">Search</a>
+          </div>
         </div>
 
-        <div class="main-content">main content</div>
-        <div class="music-player">music player</div>
+        <!-- ============ LIBRARY ============ -->
+        <div class="library">
+          <div class="library-header">
+            <span class="library-icon">
+              <img src="./assets/library_icon.png" alt="Your Library" />
+            </span>
+            <span class="library-title">Your Library</span>
+            <span class="library-actions">
+              <i class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </div>
+
+          <!-- Playlist card -->
+          <div class="library-card">
+            <h3>Create your first playlist</h3>
+            <p>It's easy, we'll help you</p>
+            <button class="btn-library">Create playlist</button>
+          </div>
+
+          <!-- Podcast recommendation card -->
+          <div class="library-card">
+            <h3>Let's find some podcasts to follow</h3>
+            <p>We'll keep you updated on new episodes</p>
+            <button class="btn-library">Browse podcasts</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ MAIN CONTENT ============ -->
+      <div class="main-content">
+        <!-- Top navigation -->
+        <div class="top-navigation">
+          <div class="nav-arrows">
+            <i class="fa-solid fa-chevron-left"></i>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="nav-buttons">
+            <button class="btn-premium">Explore Premium</button>
+            <button class="btn-install">
+              <i class="fa-solid fa-download"></i>
+              Install App
+            </button>
+            <span class="user-icon"><i class="fa-solid fa-user"></i></span>
+          </div>
+        </div>
+
+        <!-- Recently played -->
+        <section class="section recently-played">
+          <h2 class="section-title">Recently played</h2>
+          <div class="cards-grid">
+            <div class="card">
+              <img src="./assets/card1img.jpeg" alt="Top 50 - Global" />
+              <h3>Top 50</h3>
+              <p>GLOBAL</p>
+              <p class="card-description">
+                Top 50 - Global<br />Your daily update of the most played...
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Podcast section -->
+        <section class="section podcast-section">
+          <div class="section-header">
+            <h2 class="section-title">Spotify original &amp; exclusive podcasts</h2>
+            <a href="#" class="show-all">Show all</a>
+          </div>
+          <div class="cards-grid">
+            <div class="card">
+              <img src="./assets/card2img.jpeg" alt="True Story Bro!..." />
+              <h3>True Story Bro!...</h3>
+              <p>Spotify</p>
+            </div>
+            <div class="card">
+              <img src="./assets/card3img.jpeg" alt="Chanakya Niti" />
+              <h3>Chanakya Niti</h3>
+              <p>Kiran Chavda</p>
+            </div>
+            <div class="card">
+              <img src="./assets/card4img.jpeg" alt="The Horror Show" />
+              <h3>The Horror Show</h3>
+              <p>TMV Studios</p>
+            </div>
+            <div class="card">
+              <img src="./assets/card5img.jpeg" alt="Horror Time" />
+              <h3>Horror Time</h3>
+              <p>Horror Time</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ============ MUSIC PLAYER ============ -->
+      <div class="music-player">
+        <!-- Left: song information -->
+        <div class="player-left song-info">
+          <img src="./assets/card6img.jpeg" alt="Album artwork" class="album-art" />
+          <div class="song-details">
+            <h4 class="song-title">Song Title</h4>
+            <p class="song-artist">Artist</p>
+          </div>
+          <i class="fa-solid fa-heart like-button"></i>
+        </div>
+
+        <!-- Center: player controls -->
+        <div class="player-center controls">
+          <div class="control-buttons">
+            <i class="fa-solid fa-shuffle"></i>
+            <i class="fa-solid fa-backward-step"></i>
+            <i class="fa-solid fa-circle-play play-button"></i>
+            <i class="fa-solid fa-forward-step"></i>
+            <i class="fa-solid fa-repeat"></i>
+          </div>
+          <div class="progress-bar">
+            <span class="time">0:00</span>
+            <img src="./assets/play_musicbar.png" alt="Progress" class="progress-track" />
+            <span class="time">3:33</span>
+          </div>
+        </div>
+
+        <!-- Right: volume / additional controls -->
+        <div class="player-right additional-controls">
+          <i class="fa-solid fa-list"></i>
+          <i class="fa-solid fa-mobile-screen"></i>
+          <i class="fa-solid fa-volume-high"></i>
+          <input type="range" min="0" max="100" value="70" class="volume-slider" />
+        </div>
+      </div>
     </div>
-</body>
-</html>
   </body>
 </html>
