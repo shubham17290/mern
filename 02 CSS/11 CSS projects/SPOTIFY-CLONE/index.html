@@ -133,7 +133,41 @@
       </div>
 
       <!-- 3. BOTTOM MUSIC PLAYER (fixed at the bottom) -->
-      <div class="music-player">music player</div>
+      <div class="music-player">
+        <!-- Left: song info -->
+        <div class="player-left">
+          <img class="album-art" src="./assets/card1img.jpeg" alt="Album artwork" />
+          <div class="song-details">
+            <h4 class="song-title">Top 50</h4>
+            <p class="song-artist">GLOBAL</p>
+          </div>
+          <i class="fa-solid fa-heart like-button"></i>
+        </div>
+
+        <!-- Center: playback controls + timeline -->
+        <div class="player-center">
+          <div class="control-buttons">
+            <img src="./assets/player_icon1.png" alt="Shuffle" />
+            <img src="./assets/player_icon2.png" alt="Previous" />
+            <img class="play-button" src="./assets/player_icon3.png" alt="Play/Pause" />
+            <img src="./assets/player_icon4.png" alt="Next" />
+            <img src="./assets/player_icon5.png" alt="Repeat" />
+          </div>
+          <div class="progress-bar">
+            <span class="time">0:00</span>
+            <img class="progress-track" src="./assets/play_musicbar.png" alt="Playback timeline" />
+            <span class="time">3:33</span>
+          </div>
+        </div>
+
+        <!-- Right: volume / extra controls -->
+        <div class="player-right">
+          <i class="fa-solid fa-list"></i>
+          <i class="fa-solid fa-mobile-screen"></i>
+          <i class="fa-solid fa-volume-high"></i>
+          <input class="volume-slider" type="range" min="0" max="100" value="70" />
+        </div>
+      </div>
     </div>
   </body>
 </html>
