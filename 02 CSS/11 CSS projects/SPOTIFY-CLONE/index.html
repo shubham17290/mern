@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Spotify clone — a CSS-layout study with a fully working local music player." />
+      content="Spotify clone — a CSS-layout study with a fully working local music player."
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
       integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
+      referrerpolicy="no-referrer"
+    />
 
     <link rel="icon" href="./assets/logo.png" />
     <title>Spotify Music player | Music for everyone</title>
@@ -20,7 +22,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="main">
@@ -39,7 +42,13 @@
             <a href="#">Home</a>
           </div>
 
-          <div class="nav-option" id="navSearch" role="button" tabindex="0" aria-label="Open search">
+          <div
+            class="nav-option"
+            id="navSearch"
+            role="button"
+            tabindex="0"
+            aria-label="Open search"
+          >
             <i class="fa-solid fa-magnifying-glass"></i>
             <a href="#">Search</a>
           </div>
@@ -58,18 +67,24 @@
                 role="button"
                 tabindex="0"
                 aria-label="Create playlist"
-                data-toast="Sign in to create and save playlists"></i>
+                data-toast="Sign in to create and save playlists"
+              ></i>
               <i
                 class="fa-solid fa-arrow-right"
                 role="button"
                 tabindex="0"
                 aria-label="Expand library"
-                data-toast="The full library view is not part of this demo"></i>
+                data-toast="The full library view is not part of this demo"
+              ></i>
             </span>
           </div>
 
           <!-- Playlists / liked songs live here once tracks exist -->
-          <ul class="library-list" id="libraryList" aria-label="Your playlists"></ul>
+          <ul
+            class="library-list"
+            id="libraryList"
+            aria-label="Your playlists"
+          ></ul>
 
           <!-- CTA box 1 -->
           <div class="library-card">
@@ -78,7 +93,8 @@
             <button
               class="btn-library"
               type="button"
-              data-toast="Sign in to create and save playlists">
+              data-toast="Sign in to create and save playlists"
+            >
               Create playlist
             </button>
           </div>
@@ -90,7 +106,8 @@
             <button
               class="btn-library"
               type="button"
-              data-toast="Sign in to follow podcasts">
+              data-toast="Sign in to follow podcasts"
+            >
               Browse podcasts
             </button>
           </div>
@@ -107,25 +124,29 @@
               alt="Go back"
               role="button"
               tabindex="0"
-              data-toast="There is no previous page in this demo" />
+              data-toast="There is no previous page in this demo"
+            />
             <img
               src="./assets/forward_icon.png"
               alt="Go forward"
               role="button"
               tabindex="0"
-              data-toast="There is no next page in this demo" />
+              data-toast="There is no next page in this demo"
+            />
           </div>
           <div class="nav-buttons">
             <button
               class="btn-premium"
               type="button"
-              data-toast="Premium checkout is not part of this demo — enjoy the music free">
+              data-toast="Premium checkout is not part of this demo — enjoy the music free"
+            >
               Explore Premium
             </button>
             <button
               class="btn-install"
               type="button"
-              data-toast="This demo already runs as an app in your browser">
+              data-toast="This demo already runs as an app in your browser"
+            >
               <i class="fa-solid fa-download"></i>
               Install App
             </button>
@@ -134,7 +155,8 @@
               role="button"
               tabindex="0"
               aria-label="Account"
-              data-toast="Sign in to sync your account">
+              data-toast="Sign in to sync your account"
+            >
               <i class="fa-solid fa-user"></i>
             </span>
           </div>
@@ -144,7 +166,12 @@
         <section class="section recently-played" aria-label="Recently played">
           <h2 class="section-title">Recently played</h2>
           <div class="cards-grid">
-            <article class="card" data-track="0" tabindex="0" aria-label="Play Neon Skyline by Aurora Drive">
+            <article
+              class="card"
+              data-track="0"
+              tabindex="0"
+              aria-label="Play Neon Skyline by Aurora Drive"
+            >
               <div class="card-art">
                 <img src="./assets/card1img.jpeg" alt="Top 50 - Global cover" />
                 <span class="card-play"><i class="fa-solid fa-play"></i></span>
@@ -152,7 +179,12 @@
               <h3>Top 50 - Global</h3>
               <p>Your daily update of the most played tracks</p>
             </article>
-            <article class="card" data-track="1" tabindex="0" aria-label="Play Golden Hour by Miya Solna">
+            <article
+              class="card"
+              data-track="1"
+              tabindex="0"
+              aria-label="Play Golden Hour by Miya Solna"
+            >
               <div class="card-art">
                 <img src="./assets/card2img.jpeg" alt="Daily Mix 1 cover" />
                 <span class="card-play"><i class="fa-solid fa-play"></i></span>
@@ -160,7 +192,12 @@
               <h3>Daily Mix 1</h3>
               <p>Miya Solna, acoustic pop and more</p>
             </article>
-            <article class="card" data-track="2" tabindex="0" aria-label="Play Paper Planes by The Quiet Ones">
+            <article
+              class="card"
+              data-track="2"
+              tabindex="0"
+              aria-label="Play Paper Planes by The Quiet Ones"
+            >
               <div class="card-art">
                 <img src="./assets/card3img.jpeg" alt="Discover Weekly cover" />
                 <span class="card-play"><i class="fa-solid fa-play"></i></span>
@@ -174,11 +211,23 @@
         <!-- Spotify original & exclusive podcasts -->
         <section class="section podcast-section" aria-label="Podcasts">
           <div class="section-header">
-            <h2 class="section-title">Spotify original &amp; exclusive podcasts</h2>
-            <a href="#" class="show-all" data-toast="The full catalogue is not part of this demo">Show all</a>
+            <h2 class="section-title">
+              Spotify original &amp; exclusive podcasts
+            </h2>
+            <a
+              href="#"
+              class="show-all"
+              data-toast="The full catalogue is not part of this demo"
+              >Show all</a
+            >
           </div>
           <div class="cards-grid">
-            <article class="card" data-track="3" tabindex="0" aria-label="Play Cold Open by True Story Bro">
+            <article
+              class="card"
+              data-track="3"
+              tabindex="0"
+              aria-label="Play Cold Open by True Story Bro"
+            >
               <div class="card-art">
                 <img src="./assets/card4img.jpeg" alt="True Story Bro cover" />
                 <span class="card-play"><i class="fa-solid fa-play"></i></span>
@@ -186,7 +235,12 @@
               <h3>True Story Bro!...</h3>
               <p>Spotify</p>
             </article>
-            <article class="card" data-track="4" tabindex="0" aria-label="Play Don't Open The Door by TMV Studios">
+            <article
+              class="card"
+              data-track="4"
+              tabindex="0"
+              aria-label="Play Don't Open The Door by TMV Studios"
+            >
               <div class="card-art">
                 <img src="./assets/card5img.jpeg" alt="The Horror Show cover" />
                 <span class="card-play"><i class="fa-solid fa-play"></i></span>
@@ -194,7 +248,12 @@
               <h3>The Horror Show</h3>
               <p>TMV Studios</p>
             </article>
-            <article class="card" data-track="5" tabindex="0" aria-label="Play Niti Chapter 1 by Kiran Chavda">
+            <article
+              class="card"
+              data-track="5"
+              tabindex="0"
+              aria-label="Play Niti Chapter 1 by Kiran Chavda"
+            >
               <div class="card-art">
                 <img src="./assets/card6img.jpeg" alt="Chanakya Niti cover" />
                 <span class="card-play"><i class="fa-solid fa-play"></i></span>
@@ -206,21 +265,42 @@
         </section>
 
         <!-- Trending near you -->
-        <section class="section trending-section" aria-label="Trending now near you">
+        <section
+          class="section trending-section"
+          aria-label="Trending now near you"
+        >
           <div class="section-header">
             <h2 class="section-title">Trending now near you</h2>
-            <a href="#" class="show-all" data-toast="The full charts are not part of this demo">Show all</a>
+            <a
+              href="#"
+              class="show-all"
+              data-toast="The full charts are not part of this demo"
+              >Show all</a
+            >
           </div>
           <div class="cards-grid">
-            <article class="card" data-track="6" tabindex="0" aria-label="Play Coastline by Luma and Kite">
+            <article
+              class="card"
+              data-track="6"
+              tabindex="0"
+              aria-label="Play Coastline by Luma and Kite"
+            >
               <div class="card-art">
-                <img src="./assets/card7img.jpeg" alt="Late Night Drive cover" />
+                <img
+                  src="./assets/card7img.jpeg"
+                  alt="Late Night Drive cover"
+                />
                 <span class="card-play"><i class="fa-solid fa-play"></i></span>
               </div>
               <h3>Late Night Drive</h3>
               <p>Luma &amp; Kite and more</p>
             </article>
-            <article class="card" data-track="7" tabindex="0" aria-label="Play Rain on Tin by Aarav and The Tides">
+            <article
+              class="card"
+              data-track="7"
+              tabindex="0"
+              aria-label="Play Rain on Tin by Aarav and The Tides"
+            >
               <div class="card-art">
                 <img src="./assets/card8img.jpeg" alt="Monsoon cover" />
                 <span class="card-play"><i class="fa-solid fa-play"></i></span>
@@ -228,7 +308,12 @@
               <h3>Monsoon</h3>
               <p>Aarav &amp; The Tides and more</p>
             </article>
-            <article class="card" data-track="8" tabindex="0" aria-label="Play Deep End by Studio Minimal">
+            <article
+              class="card"
+              data-track="8"
+              tabindex="0"
+              aria-label="Play Deep End by Studio Minimal"
+            >
               <div class="card-art">
                 <img src="./assets/card9img.jpeg" alt="Focus Flow cover" />
                 <span class="card-play"><i class="fa-solid fa-play"></i></span>
@@ -244,29 +329,57 @@
           <div class="footer-columns">
             <div class="footer-col">
               <h4>Company</h4>
-              <a href="#" data-toast="This link is decorative in the demo">About</a>
-              <a href="#" data-toast="This link is decorative in the demo">Jobs</a>
-              <a href="#" data-toast="This link is decorative in the demo">For the Record</a>
+              <a href="#" data-toast="This link is decorative in the demo"
+                >About</a
+              >
+              <a href="#" data-toast="This link is decorative in the demo"
+                >Jobs</a
+              >
+              <a href="#" data-toast="This link is decorative in the demo"
+                >For the Record</a
+              >
             </div>
             <div class="footer-col">
               <h4>Communities</h4>
-              <a href="#" data-toast="This link is decorative in the demo">For Artists</a>
-              <a href="#" data-toast="This link is decorative in the demo">Developers</a>
-              <a href="#" data-toast="This link is decorative in the demo">Advertising</a>
+              <a href="#" data-toast="This link is decorative in the demo"
+                >For Artists</a
+              >
+              <a href="#" data-toast="This link is decorative in the demo"
+                >Developers</a
+              >
+              <a href="#" data-toast="This link is decorative in the demo"
+                >Advertising</a
+              >
             </div>
             <div class="footer-col">
               <h4>Useful links</h4>
-              <a href="#" data-toast="This link is decorative in the demo">Support</a>
-              <a href="#" data-toast="This link is decorative in the demo">Free Mobile App</a>
+              <a href="#" data-toast="This link is decorative in the demo"
+                >Support</a
+              >
+              <a href="#" data-toast="This link is decorative in the demo"
+                >Free Mobile App</a
+              >
             </div>
             <div class="footer-social">
-              <a href="#" aria-label="Instagram" data-toast="Social links are decorative in the demo">
+              <a
+                href="#"
+                aria-label="Instagram"
+                data-toast="Social links are decorative in the demo"
+              >
                 <i class="fa-brands fa-instagram"></i>
               </a>
-              <a href="#" aria-label="Twitter" data-toast="Social links are decorative in the demo">
+              <a
+                href="#"
+                aria-label="Twitter"
+                data-toast="Social links are decorative in the demo"
+              >
                 <i class="fa-brands fa-twitter"></i>
               </a>
-              <a href="#" aria-label="Facebook" data-toast="Social links are decorative in the demo">
+              <a
+                href="#"
+                aria-label="Facebook"
+                data-toast="Social links are decorative in the demo"
+              >
                 <i class="fa-brands fa-facebook"></i>
               </a>
             </div>
@@ -284,7 +397,12 @@
 
         <!-- Left: song info -->
         <div class="player-left">
-          <img class="album-art" id="albumArt" src="./assets/card1img.jpeg" alt="Album artwork" />
+          <img
+            class="album-art"
+            id="albumArt"
+            src="./assets/card1img.jpeg"
+            alt="Album artwork"
+          />
           <div class="song-details">
             <h4 class="song-title" id="songTitle">Pick a song</h4>
             <p class="song-artist" id="songArtist">Click any card to play</p>
@@ -295,7 +413,8 @@
             role="button"
             tabindex="0"
             aria-label="Save to Liked Songs"
-            aria-pressed="false"></i>
+            aria-pressed="false"
+          ></i>
         </div>
 
         <!-- Center: playback controls + timeline -->
@@ -308,14 +427,16 @@
               role="button"
               tabindex="0"
               aria-label="Toggle shuffle"
-              aria-pressed="false" />
+              aria-pressed="false"
+            />
             <img
               src="./assets/player_icon2.png"
               alt="Previous"
               id="prevBtn"
               role="button"
               tabindex="0"
-              aria-label="Previous track" />
+              aria-label="Previous track"
+            />
             <img
               class="play-button"
               id="playBtn"
@@ -323,14 +444,16 @@
               alt="Play"
               role="button"
               tabindex="0"
-              aria-label="Play or pause" />
+              aria-label="Play or pause"
+            />
             <img
               src="./assets/player_icon4.png"
               alt="Next"
               id="nextBtn"
               role="button"
               tabindex="0"
-              aria-label="Next track" />
+              aria-label="Next track"
+            />
             <img
               src="./assets/player_icon5.png"
               alt="Repeat"
@@ -338,7 +461,8 @@
               role="button"
               tabindex="0"
               aria-label="Toggle repeat"
-              aria-pressed="false" />
+              aria-pressed="false"
+            />
           </div>
           <div class="progress-bar">
             <span class="time" id="currentTime">0:00</span>
@@ -350,7 +474,8 @@
               aria-label="Seek"
               aria-valuemin="0"
               aria-valuemax="100"
-              aria-valuenow="0">
+              aria-valuenow="0"
+            >
               <div class="progress-fill" id="progressFill"></div>
               <div class="progress-knob" id="progressKnob"></div>
             </div>
@@ -366,13 +491,15 @@
             role="button"
             tabindex="0"
             aria-label="Open play queue"
-            aria-pressed="false"></i>
+            aria-pressed="false"
+          ></i>
           <i
             class="fa-solid fa-volume-high"
             id="muteBtn"
             role="button"
             tabindex="0"
-            aria-label="Mute or unmute"></i>
+            aria-label="Mute or unmute"
+          ></i>
           <input
             class="volume-slider"
             id="volumeSlider"
@@ -380,7 +507,8 @@
             min="0"
             max="100"
             value="70"
-            aria-label="Volume" />
+            aria-label="Volume"
+          />
         </div>
 
         <!-- Play queue -->
@@ -388,8 +516,15 @@
           <div class="queue-header">
             <h3>Play queue</h3>
             <div class="queue-header-actions">
-              <button class="queue-reset" id="queueReset" type="button">Reset</button>
-              <button class="queue-close" id="queueClose" type="button" aria-label="Close queue">
+              <button class="queue-reset" id="queueReset" type="button">
+                Reset
+              </button>
+              <button
+                class="queue-close"
+                id="queueClose"
+                type="button"
+                aria-label="Close queue"
+              >
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
@@ -401,7 +536,12 @@
 
     <!-- Search overlay -->
     <div class="search-overlay" id="searchOverlay" aria-hidden="true">
-      <div class="search-box" role="dialog" aria-modal="true" aria-label="Search music">
+      <div
+        class="search-box"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Search music"
+      >
         <div class="search-input-row">
           <i class="fa-solid fa-magnifying-glass"></i>
           <input
@@ -409,13 +549,27 @@
             type="search"
             placeholder="What do you want to listen to?"
             autocomplete="off"
-            aria-label="Search songs, artists and playlists" />
-          <button class="search-close" id="searchClose" type="button" aria-label="Close search">
+            aria-label="Search songs, artists and playlists"
+          />
+          <button
+            class="search-close"
+            id="searchClose"
+            type="button"
+            aria-label="Close search"
+          >
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
-        <p class="search-hint">Try a song, artist, playlist or podcast — e.g. “rain”, “lofi”, “top 50”.</p>
-        <div class="search-results" id="searchResults" role="listbox" aria-label="Search results"></div>
+        <p class="search-hint">
+          Try a song, artist, playlist or podcast — e.g. “rain”, “lofi”, “top
+          50”.
+        </p>
+        <div
+          class="search-results"
+          id="searchResults"
+          role="listbox"
+          aria-label="Search results"
+        ></div>
       </div>
     </div>
 
