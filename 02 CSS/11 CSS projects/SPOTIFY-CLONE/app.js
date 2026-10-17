@@ -64,6 +64,9 @@ const searchClose = $("searchClose");
 const navSearch = $("navSearch");
 const navHome = $("navHome");
 const libraryList = $("libraryList");
+const themeBtn = $("themeBtn");
+const themeMenu = $("themeMenu");
+const themePicker = $("themePicker");
 
 /* ---------- state ---------- */
 let queue = TRACKS.map((_, i) => i); // order of play (shuffled in place)
@@ -587,6 +590,60 @@ if ("mediaSession" in navigator) {
     /* some browsers throw on unsupported actions */
   }
 }
+
+/* ---------- theme ---------- */
+const THEMES = ["dark", "light", "aurora", "sunset", "ocean", "cyberpunk"];
+const THEME_LABELS = {
+  dark: "Midnight",
+  light: "Daylight",
+  aurora: "Aurora",
+  sunset: "Sunset",
+  ocean: "Ocean",
+  cyberpunk: "Cyberpunk",
+};
+
+function applyTheme(theme, persist) {
+  if (!THEMES.includes(theme)) theme = "dark";
+  document.documentElement.setAttribute("data-theme", theme);
+  if (persist !== false) {
+    try {
+      localStorage.setItem("spotify-clone-theme", theme);
+    } catch {
+      /* ignore */
+    }
+  }
+  document.querySelectorAll(".theme-option").forEach((opt) => {
+    opt.classList.toggle("active", opt.dataset.theme === theme);
+  });
+}
+
+function setThemeMenuOpen(open) {
+  themeMenu.classList.toggle("open", open);
+  themeBtn.setAttribute("aria-expanded", String(open));
+}
+
+let savedTheme = "dark";
+try {
+  savedTheme = localStorage.getItem("spotify-clone-theme") || "dark";
+} catch {
+  savedTheme = "dark";
+}
+applyTheme(savedTheme, false);
+
+themeBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  setThemeMenuOpen(!themeMenu.classList.contains("open"));
+});
+document.addEventListener("click", (e) => {
+  if (themePicker && !themePicker.contains(e.target)) setThemeMenuOpen(false);
+});
+themeMenu.querySelectorAll(".theme-option").forEach((opt) => {
+  opt.addEventListener("click", () => {
+    applyTheme(opt.dataset.theme);
+    setThemeMenuOpen(false);
+    toast("Theme: " + THEME_LABELS[opt.dataset.theme]);
+  });
+});
 
 /* ---------- init ---------- */
 applyVolume();
