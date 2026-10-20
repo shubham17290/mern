@@ -9,31 +9,73 @@
 <body>
   <nav class="nav">
     <a href="#hero" class="logo">YN</a>
-    <ul>
+    <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <button id="themeToggle" class="icon-btn">🌙</button>
+    <div class="nav-actions">
+      <button id="themeToggle" class="icon-btn" title="Toggle theme">🌙</button>
+      <button id="menuToggle" class="icon-btn menu-btn" title="Menu">☰</button>
+    </div>
   </nav>
 
   <section id="hero" class="hero">
-    <h1>Hi, I'm <span class="accent">Your Name</span></h1>
-    <p>Full Stack Web Developer · Building clean, responsive web apps.</p>
-    <a href="#projects" class="btn">View Projects</a>
+    <div class="hero-content">
+      <p class="greeting">Hi, I'm</p>
+      <h1><span class="accent" id="typedName">Your Name</span></h1>
+      <p class="role">I build <span id="typedRole" class="typed"></span><span class="cursor">|</span></p>
+      <p class="hero-desc">Full Stack Web Developer passionate about crafting clean, responsive, and user-friendly web applications.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+      <div class="socials">
+        <a href="https://github.com/your-username" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+        <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener" title="LinkedIn">LinkedIn</a>
+        <a href="mailto:you@example.com" title="Email">Email</a>
+      </div>
+    </div>
   </section>
 
   <section id="about" class="section">
     <h2>About Me</h2>
-    <p>I'm a web developer passionate about building responsive, user-friendly applications with HTML, CSS, and JavaScript. Replace this with your story.</p>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a web developer who loves turning ideas into clean, functional, and beautiful web experiences. I work across the full stack — from semantic HTML and responsive CSS to interactive JavaScript and beyond.</p>
+        <p>I'm currently expanding into React, Node.js, and MongoDB to build complete MERN applications. When I'm not coding, I'm learning, experimenting, and contributing to open source.</p>
+        <ul class="about-list">
+          <li>📍 Based in India</li>
+          <li>🎓 Full Stack Web Development</li>
+          <li>💼 Open to opportunities</li>
+          <li>⚡ Fast learner & problem solver</li>
+        </ul>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><span class="stat-num">6+</span><span class="stat-label">Projects</span></div>
+        <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Tech Stacks</span></div>
+        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Passion</span></div>
+      </div>
+    </div>
   </section>
 
   <section id="skills" class="section">
     <h2>Skills</h2>
-    <div class="skills">
+    <div class="skills-grid">
+      <div class="skill"><span>HTML5</span><div class="bar"><div style="width:95%"></div></div></div>
+      <div class="skill"><span>CSS3</span><div class="bar"><div style="width:90%"></div></div></div>
+      <div class="skill"><span>JavaScript (ES6+)</span><div class="bar"><div style="width:85%"></div></div></div>
+      <div class="skill"><span>Bootstrap 5</span><div class="bar"><div style="width:80%"></div></div></div>
+      <div class="skill"><span>Responsive Design</span><div class="bar"><div style="width:90%"></div></div></div>
+      <div class="skill"><span>Git & GitHub</span><div class="bar"><div style="width:80%"></div></div></div>
+      <div class="skill"><span>REST APIs</span><div class="bar"><div style="width:75%"></div></div></div>
+      <div class="skill"><span>Node.js (learning)</span><div class="bar"><div style="width:40%"></div></div></div>
+    </div>
+    <div class="skill-tags">
       <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span>
-      <span>Git</span><span>Responsive Design</span>
+      <span>Git</span><span>REST APIs</span><span>localStorage</span><span>Responsive</span>
+      <span>Flexbox</span><span>CSS Grid</span><span>DOM</span><span>Async/Await</span>
     </div>
   </section>
 
@@ -41,34 +83,89 @@
     <h2>Projects</h2>
     <div class="project-grid">
       <article class="project-card">
+        <div class="project-thumb weather">🌤️</div>
         <h3>Weather App</h3>
-        <p>Live weather via OpenWeatherMap API.</p>
-        <a href="#" target="_blank">Live Demo</a> · <a href="#" target="_blank">Code</a>
+        <p>Live weather & 5-day forecast via OpenWeatherMap API with geolocation, unit toggle, and recent searches.</p>
+        <div class="project-tech"><span>HTML</span><span>CSS</span><span>JS</span><span>API</span></div>
+        <div class="project-links">
+          <a href="#" target="_blank">Live Demo</a>
+          <a href="#" target="_blank">Code</a>
+        </div>
       </article>
       <article class="project-card">
+        <div class="project-thumb todo">✅</div>
         <h3>Smart To-Do</h3>
-        <p>Task manager with drag-and-drop & theming.</p>
-        <a href="#" target="_blank">Live Demo</a> · <a href="#" target="_blank">Code</a>
+        <p>Task manager with CRUD, drag-and-drop reordering, due dates, theming, and localStorage.</p>
+        <div class="project-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        <div class="project-links">
+          <a href="#" target="_blank">Live Demo</a>
+          <a href="#" target="_blank">Code</a>
+        </div>
       </article>
       <article class="project-card">
+        <div class="project-thumb shop">🛒</div>
+        <h3>Mini E-Commerce</h3>
+        <p>Storefront with filtering, sorting, cart, wishlist, promo codes, and product modal.</p>
+        <div class="project-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        <div class="project-links">
+          <a href="#" target="_blank">Live Demo</a>
+          <a href="#" target="_blank">Code</a>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-thumb movie">🎬</div>
+        <h3>Movie Search</h3>
+        <p>Debounced movie search with TMDB API, favorites, detail modal, and pagination.</p>
+        <div class="project-tech"><span>HTML</span><span>CSS</span><span>JS</span><span>API</span></div>
+        <div class="project-links">
+          <a href="#" target="_blank">Live Demo</a>
+          <a href="#" target="_blank">Code</a>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-thumb quiz">🧠</div>
         <h3>Quiz App</h3>
-        <p>Interactive quiz with timer & leaderboard.</p>
-        <a href="#" target="_blank">Live Demo</a> · <a href="#" target="_blank">Code</a>
+        <p>Interactive quiz with categories, difficulty, timers, review screen, and leaderboard.</p>
+        <div class="project-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        <div class="project-links">
+          <a href="#" target="_blank">Live Demo</a>
+          <a href="#" target="_blank">Code</a>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-thumb spotify">🎧</div>
+        <h3>Spotify Clone</h3>
+        <p>Full working local music player with queue, shuffle, repeat, likes, and keyboard support.</p>
+        <div class="project-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        <div class="project-links">
+          <a href="#" target="_blank">Live Demo</a>
+          <a href="#" target="_blank">Code</a>
+        </div>
       </article>
     </div>
   </section>
 
   <section id="contact" class="section">
     <h2>Contact</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Message" rows="4" required></textarea>
-      <button type="submit" class="btn">Send</button>
+    <p class="contact-intro">Have a project in mind or just want to say hi? Drop a message!</p>
+    <form id="contactForm" class="contact-form">
+      <div class="form-row">
+        <input type="text" id="cName" placeholder="Your Name" required />
+        <input type="email" id="cEmail" placeholder="Your Email" required />
+      </div>
+      <input type="text" id="cSubject" placeholder="Subject" />
+      <textarea id="cMessage" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+      <p id="formStatus" class="form-status"></p>
     </form>
   </section>
 
-  <footer>© 2026 Your Name. Built with HTML, CSS & JS.</footer>
+  <footer>
+    <p>© 2026 Your Name. Built with HTML, CSS & JS.</p>
+    <p class="footer-sub">Designed & developed with ❤️</p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" title="Back to top">↑</button>
 
   <script src="script.js"></script>
 </body>
