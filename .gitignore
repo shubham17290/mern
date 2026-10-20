@@ -1,0 +1,14 @@
+# VS Code
+.vscode/
+
+# Dependencies
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local config / secrets
+config.js
+.env
+
