@@ -1,5 +1,7 @@
 # 🌐 Full Stack Web Development
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-d4af37?style=for-the-badge&logo=githubpages&logoColor=white)](https://shubham17290.github.io/Sigma_12_web-development_Apna_college/)
+
 [![Course](https://img.shields.io/badge/Course-Full%20Stack%20Web%20Dev-ff6f00?style=for-the-badge&logo=google-scholar&logoColor=white)]()
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
