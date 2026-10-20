@@ -16,14 +16,38 @@
         <option value="default">Sort</option>
         <option value="price-asc">Price: Low → High</option>
         <option value="price-desc">Price: High → Low</option>
+        <option value="name">Name: A → Z</option>
       </select>
     </div>
-    <button id="cartBtn" class="cart-btn">🛒 <span id="cartCount">0</span></button>
+    <div class="nav-actions">
+      <button id="wishBtn" class="icon-btn" title="Wishlist">❤️ <span id="wishCount">0</span></button>
+      <button id="cartBtn" class="cart-btn">🛒 <span id="cartCount">0</span></button>
+      <button id="themeToggle" class="icon-btn" title="Toggle theme">🌙</button>
+    </div>
   </header>
 
   <main>
     <section id="products" class="products"></section>
+    <div id="empty" class="empty hidden">No products match your search. 🔍</div>
   </main>
+
+  <!-- Product modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card">
+      <button id="modalClose" class="modal-close">✕</button>
+      <img id="modalImg" src="" alt="" />
+      <div class="modal-body">
+        <h2 id="modalName"></h2>
+        <p id="modalCat" class="muted"></p>
+        <p id="modalPrice" class="price"></p>
+        <div class="modal-actions">
+          <button id="modalWish" class="secondary">❤️ Wishlist</button>
+          <button id="modalAdd" class="primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Cart drawer -->
   <aside id="cartDrawer" class="cart-drawer hidden">
@@ -32,11 +56,22 @@
       <button id="closeCart">✕</button>
     </div>
     <div id="cartItems" class="cart-items"></div>
+    <div class="cart-promo">
+      <input type="text" id="promoInput" placeholder="Promo code (SAVE10)" />
+      <button id="applyPromo">Apply</button>
+    </div>
+    <div id="promoMsg" class="promo-msg"></div>
     <div class="cart-foot">
-      <p>Total: <strong id="cartTotal">₹0</strong></p>
-      <button id="checkout">Checkout</button>
+      <div>
+        <p>Subtotal: <span id="subtotal">₹0</span></p>
+        <p>Discount: <span id="discount">₹0</span></p>
+        <p><strong>Total: <span id="cartTotal">₹0</span></strong></p>
+      </div>
+      <button id="checkout" class="primary">Checkout</button>
     </div>
   </aside>
+
+  <div id="toast" class="toast hidden"></div>
 
   <script src="script.js"></script>
 </body>
