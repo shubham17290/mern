@@ -14,9 +14,13 @@ A movie discovery app with debounced search, API integration, favorites, and pag
 HTML5 · CSS3 · Vanilla JavaScript · TMDB/OMDb API · debounce
 
 ## Setup
-1. Get a free API key from [themoviedb.org](https://www.themoviedb.org/settings/api)
-2. Open `script.js` and replace `YOUR_API_KEY` with your key.
-3. Open `index.html` in a browser.
+1. Get a free API key from [themoviedb.org](https://www.themoviedb.org/settings/api) (optional — app works offline with bundled sample data).
+2. Copy `config.example.js` to `config.js` and paste your key:
+   ```js
+   window.CONFIG = { API_KEY: "your_key_here" };
+   ```
+   `config.js` is gitignored, so your key stays local.
+3. Open `index.html` in a browser (serve via `python -m http.server` for `fetch`).
 
 ## Resume Line
 > Created a movie discovery app with debounced search, API integration, favorites, and pagination.
