@@ -8,12 +8,59 @@
 </head>
 <body>
   <main class="app">
+    <!-- Start -->
     <section id="startScreen" class="screen">
-      <h1>Quiz App 🧠</h1>
-      <p>Test your knowledge. 10 questions, 15s each.</p>
-      <button id="startBtn" class="primary">Start Quiz</button>
+      <div class="start-top">
+        <h1>Quiz App 🧠</h1>
+        <button id="themeToggle" class="icon-btn" title="Toggle theme">🌙</button>
+      </div>
+      <p class="subtitle">Test your knowledge. Pick a category and difficulty.</p>
+
+      <div class="config">
+        <label>Category
+          <select id="category">
+            <option value="all">All Categories</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="Web">Web General</option>
+          </select>
+        </label>
+        <label>Difficulty
+          <select id="difficulty">
+            <option value="all">All</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+        <label>Questions
+          <select id="qCount">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="15">15</option>
+          </select>
+        </label>
+        <label>Time per Q (s)
+          <select id="timePerQ">
+            <option value="10">10</option>
+            <option value="15" selected>15</option>
+            <option value="30">30</option>
+          </select>
+        </label>
+      </div>
+
+      <input type="text" id="playerName" placeholder="Your name (for leaderboard)" maxlength="20" />
+
+      <button id="startBtn" class="primary">Start Quiz ▶</button>
+
+      <div class="lb-preview">
+        <h3>🏆 Leaderboard</h3>
+        <ol id="leaderboardPreview"></ol>
+      </div>
     </section>
 
+    <!-- Quiz -->
     <section id="quizScreen" class="screen hidden">
       <div class="hud">
         <span id="progress">Question 1/10</span>
@@ -23,14 +70,35 @@
       <div class="progress-bar"><div id="progressFill"></div></div>
       <h2 id="question">Question text</h2>
       <div id="options" class="options"></div>
+      <div class="quiz-actions">
+        <button id="skipBtn" class="secondary">Skip</button>
+      </div>
     </section>
 
+    <!-- Result -->
     <section id="resultScreen" class="screen hidden">
-      <h1>Quiz Complete! 🎉</h1>
-      <p id="finalScore"></p>
-      <button id="restartBtn" class="primary">Play Again</button>
-      <h3>Leaderboard</h3>
-      <ol id="leaderboard"></ol>
+      <h1 id="resultTitle">Quiz Complete! 🎉</h1>
+      <div class="result-stats">
+        <div class="stat"><div class="stat-val" id="finalScore">0</div><div class="stat-label">Score</div></div>
+        <div class="stat"><div class="stat-val" id="finalPct">0%</div><div class="stat-label">Accuracy</div></div>
+        <div class="stat"><div class="stat-val" id="finalTime">0s</div><div class="stat-label">Avg time</div></div>
+      </div>
+      <p id="gradeMsg" class="grade"></p>
+
+      <details class="review">
+        <summary>Review answers</summary>
+        <div id="reviewList" class="review-list"></div>
+      </details>
+
+      <div class="result-actions">
+        <button id="restartBtn" class="primary">Play Again</button>
+        <button id="homeBtn" class="secondary">Home</button>
+      </div>
+
+      <div class="lb-full">
+        <h3>🏆 Leaderboard</h3>
+        <ol id="leaderboard"></ol>
+      </div>
     </section>
   </main>
 
