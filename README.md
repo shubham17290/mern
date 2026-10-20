@@ -1,6 +1,6 @@
 # 🌐 Full Stack Web Development
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-d4af37?style=for-the-badge&logo=githubpages&logoColor=white)](https://shubham17290.github.io/Sigma_12_web-development_Apna_college/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-d4af37?style=for-the-badge&logo=githubpages&logoColor=white)](https://shubham17290.github.io/mern/)
 
 [![Course](https://img.shields.io/badge/Course-Full%20Stack%20Web%20Dev-ff6f00?style=for-the-badge&logo=google-scholar&logoColor=white)]()
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -9,7 +9,7 @@
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)](http://makeapullrequest.com)
-[![Stars](https://img.shields.io/github/stars/shubham17290/Sigma_12_web-development_Apna_college?style=for-the-badge)](https://github.com/shubham17290/Sigma_12_web-development_Apna_college/stargazers)
+[![Stars](https://img.shields.io/github/stars/shubham17290/mern?style=for-the-badge)](https://github.com/shubham17290/mern/stargazers)
 
 > A complete, hands-on learning repository for **Full Stack Web Development**. It collects every lecture, assignment, practice problem and mini-project across **HTML5, CSS3, JavaScript (ES6+), Bootstrap 5** — written as clean, well-commented, runnable code you can open in a browser or run with Node.js. No build step, no dependencies for the core lessons. 🚀
 
@@ -257,8 +257,8 @@ Before you begin, make sure you have:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/shubham17290/Sigma_12_web-development_Apna_college.git
-cd Sigma_12_web-development_Apna_college
+git clone https://github.com/shubham17290/mern.git
+cd mern
 ```
 
 ### 2. Run a lesson in the browser
