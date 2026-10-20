@@ -3,187 +3,348 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Full Stack Web Development — Portfolio & Projects</title>
-  <meta name="description" content="A collection of HTML, CSS, JavaScript projects: Weather App, Smart To-Do, E-Commerce, Movie Search, Quiz App, and a personal portfolio." />
+  <title>Full Stack Web Development — Learning Hub</title>
+  <meta name="description" content="A complete, hands-on learning repository for Full Stack Web Development: HTML5, CSS3, JavaScript ES6+, Bootstrap 5. Clean, runnable code." />
+  <meta property="og:title" content="Full Stack Web Development — Learning Hub" />
+  <meta property="og:description" content="Concept-first files, assignments, mini-projects and resume-ready templates. Open in a browser and run." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Nav -->
-  <nav class="nav">
-    <a href="#" class="logo">⟨/⟩ DevPortfolio</a>
-    <ul class="nav-links">
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#tech">Tech Stack</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="https://github.com/shubham17290/mern" target="_blank" rel="noopener" class="gh-btn">⭐ Star on GitHub</a>
-  </nav>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-orb orb-1" aria-hidden="true"></div>
+  <div class="bg-orb orb-2" aria-hidden="true"></div>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <span class="badge">🚀 Open Source · Learning Journey</span>
-      <h1>Full Stack Web Development<br /><span class="gradient">Projects & Portfolio</span></h1>
-      <p class="hero-desc">
-        A curated collection of production-ready frontend projects built with
-        HTML5, CSS3, and Vanilla JavaScript — each one a real, deployable app
-        you can learn from, customize, and ship.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">Explore Projects</a>
-        <a href="https://github.com/shubham17290/mern" target="_blank" rel="noopener" class="btn btn-ghost">View Source</a>
-      </div>
-      <div class="hero-stats">
-        <div><strong>6</strong><span>Projects</span></div>
-        <div><strong>100%</strong><span>Vanilla JS</span></div>
-        <div><strong>0</strong><span>Dependencies</span></div>
-        <div><strong>MIT</strong><span>License</span></div>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <span class="brand-mark">MH</span>
+        <span class="brand-name">MERN<span class="accent">.HuB</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#roadmap">Roadmap</a>
+        <a href="#modules">Modules</a>
+        <a href="#projects">Projects</a>
+        <a href="#stack">Stack</a>
+        <a href="#start">Start</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="https://github.com/shubham17290/mern" target="_blank" rel="noopener">GitHub</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <div class="section-head">
-      <h2>Featured Projects</h2>
-      <p>Click any card to explore the live demo or source code.</p>
-    </div>
-    <div class="projects-grid">
-      <article class="project-card" data-color="#38bdf8">
-        <div class="project-icon">🌤️</div>
-        <h3>Weather App</h3>
-        <p>Live weather & 5-day forecast via OpenWeatherMap API. Geolocation, °C/°F toggle, recent searches.</p>
-        <div class="tags"><span>API</span><span>Async/Await</span><span>localStorage</span></div>
-        <div class="card-links">
-          <a href="https://github.com/shubham17290/mern/tree/main/04%20Projects/01%20Weather%20App" target="_blank">Code →</a>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Open Source · MIT Licensed · Zero Build Step
         </div>
-      </article>
-      <article class="project-card" data-color="#818cf8">
-        <div class="project-icon">✅</div>
-        <h3>Smart To-Do</h3>
-        <p>Task manager with CRUD, drag-and-drop reorder, due dates, theming, and persistence.</p>
-        <div class="tags"><span>CRUD</span><span>DnD</span><span>Theming</span></div>
-        <div class="card-links">
-          <a href="https://github.com/shubham17290/mern/tree/main/04%20Projects/02%20Smart%20To-Do" target="_blank">Code →</a>
+        <h1 class="hero-title">
+          Forge Your Skills in<br />
+          <span class="grad-text">Full Stack Web Development</span>
+        </h1>
+        <p class="hero-sub">
+          A complete, hands-on learning journal — every concept captured as a small, focused,
+          runnable file. From semantic HTML to JavaScript ES6+, Bootstrap 5 and beyond. Open in
+          a browser and you're running.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://github.com/shubham17290/mern" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+            View Repository
+          </a>
+          <a class="btn btn-outline" href="#start">Get Started</a>
         </div>
-      </article>
-      <article class="project-card" data-color="#2563eb">
-        <div class="project-icon">🛒</div>
-        <h3>Mini E-Commerce</h3>
-        <p>Storefront with filtering, sorting, cart, wishlist, promo codes, and product modal.</p>
-        <div class="tags"><span>Cart</span><span>Filter/Sort</span><span>Modal</span></div>
-        <div class="card-links">
-          <a href="https://github.com/shubham17290/mern/tree/main/04%20Projects/03%20Mini%20E-Commerce%20Store" target="_blank">Code →</a>
-        </div>
-      </article>
-      <article class="project-card" data-color="#f5c518">
-        <div class="project-icon">🎬</div>
-        <h3>Movie Search</h3>
-        <p>Debounced movie search with TMDB API, favorites, detail modal, and pagination.</p>
-        <div class="tags"><span>Debounce</span><span>API</span><span>Pagination</span></div>
-        <div class="card-links">
-          <a href="https://github.com/shubham17290/mern/tree/main/04%20Projects/04%20Movie%20Search%20App" target="_blank">Code →</a>
-        </div>
-      </article>
-      <article class="project-card" data-color="#22c55e">
-        <div class="project-icon">🧠</div>
-        <h3>Quiz App</h3>
-        <p>Interactive quiz with categories, difficulty, timers, review screen, and leaderboard.</p>
-        <div class="tags"><span>Timers</span><span>Scoring</span><span>Leaderboard</span></div>
-        <div class="card-links">
-          <a href="https://github.com/shubham17290/mern/tree/main/04%20Projects/05%20Quiz%20App" target="_blank">Code →</a>
-        </div>
-      </article>
-      <article class="project-card" data-color="#ec4899">
-        <div class="project-icon">🌐</div>
-        <h3>Personal Portfolio</h3>
-        <p>Responsive portfolio with typing animation, scroll reveals, theming, and project showcase.</p>
-        <div class="tags"><span>Responsive</span><span>Animations</span><span>Theming</span></div>
-        <div class="card-links">
-          <a href="https://github.com/shubham17290/mern/tree/main/04%20Projects/06%20Personal%20Portfolio" target="_blank">Code →</a>
-        </div>
-      </article>
-    </div>
-  </section>
 
-  <!-- Features -->
-  <section id="features" class="section alt">
-    <div class="section-head">
-      <h2>Why This Repo?</h2>
-      <p>Built to be learned from, not just looked at.</p>
-    </div>
-    <div class="features-grid">
-      <div class="feature">
-        <div class="feature-icon">📦</div>
-        <h3>Zero Dependencies</h3>
-        <p>Pure HTML, CSS, and Vanilla JavaScript. No build step, no npm install — just open and run.</p>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num" data-target="4">0</span><span class="stat-label">Modules</span></div>
+          <div class="stat"><span class="stat-num" data-target="6">0</span><span class="stat-label">Resume Projects</span></div>
+          <div class="stat"><span class="stat-num" data-target="16">0</span><span class="stat-label">HTML Projects</span></div>
+          <div class="stat"><span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span><span class="stat-label">Runnable</span></div>
+        </div>
       </div>
-      <div class="feature">
-        <div class="feature-icon">📱</div>
-        <h3>Fully Responsive</h3>
-        <p>Every project adapts to mobile, tablet, and desktop with CSS Grid and Flexbox.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">🌙</div>
-        <h3>Dark / Light Themes</h3>
-        <p>Theme toggles with persisted preference across sessions.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">🔒</div>
-        <h3>Secured API Keys</h3>
-        <p>Keys live in gitignored config files — never committed to GitHub.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">📖</div>
-        <h3>Documented</h3>
-        <p>Each project has a README with setup, features, and a ready-to-use resume bullet.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">🚀</div>
-        <h3>Deploy Ready</h3>
-        <p>Drop any folder onto Netlify, Vercel, or GitHub Pages — instant live demo.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Tech stack -->
-  <section id="tech" class="section">
-    <div class="section-head">
-      <h2>Tech Stack</h2>
-      <p>The tools behind every project.</p>
-    </div>
-    <div class="tech-grid">
-      <div class="tech-item"><span>HTML5</span></div>
-      <div class="tech-item"><span>CSS3</span></div>
-      <div class="tech-item"><span>JavaScript (ES6+)</span></div>
-      <div class="tech-item"><span>Bootstrap 5</span></div>
-      <div class="tech-item"><span>REST APIs</span></div>
-      <div class="tech-item"><span>localStorage</span></div>
-      <div class="tech-item"><span>Git & GitHub</span></div>
-      <div class="tech-item"><span>Responsive Design</span></div>
-    </div>
-  </section>
+    <!-- ROADMAP -->
+    <section id="roadmap" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Curriculum</span>
+          <h2>Learning Roadmap</h2>
+          <p>A progressive journey from markup to full stack.</p>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-phase">Phase 1</span>
+              <h3>HTML5 Fundamentals</h3>
+              <p>Tags, lists, anchors, forms, tables, semantic markup &amp; media.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-phase">Phase 2</span>
+              <h3>CSS3 Mastery</h3>
+              <p>Box model, flexbox, grid, positioning, animations &amp; transforms.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-phase">Phase 3</span>
+              <h3>CSS Frameworks</h3>
+              <p>Bootstrap 5.3 — components, grid system &amp; utilities.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-phase">Phase 4</span>
+              <h3>Mini-Projects &amp; Clones</h3>
+              <p>Spotify player, TraveLand agency, animation projects.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-phase">Phase 5</span>
+              <h3>JavaScript ES6+</h3>
+              <p>Operators, control flow, DOM, truthy/falsy, switch &amp; prompts.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-phase">Phase 6</span>
+              <h3>MERN Stack</h3>
+              <p>React · Node.js · Express · MongoDB — coming next.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section alt">
-    <div class="section-head">
-      <h2>Get In Touch</h2>
-      <p>Have a question or want to collaborate? Reach out.</p>
-    </div>
-    <div class="contact-box">
-      <a href="mailto:smourya1046@gmail.com" class="contact-link">✉️ smourya1046@gmail.com</a>
-      <a href="https://github.com/shubham17290" target="_blank" rel="noopener" class="contact-link">🐙 github.com/shubham17290</a>
-      <a href="https://linkedin.com/in/shubham17290" target="_blank" rel="noopener" class="contact-link">💼 LinkedIn</a>
-    </div>
-  </section>
+    <!-- MODULES -->
+    <section id="modules" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Modules</span>
+          <h2>Module Breakdown</h2>
+          <p>Numbered folders, one concept per file.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon">📄</div>
+            <h3>HTML</h3>
+            <ul>
+              <li>Level 01 — Basics &amp; attributes</li>
+              <li>Level 02 — Forms, tables, media</li>
+              <li>Level 03 — 16 guided projects</li>
+              <li>TraveLand agency template</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="card-icon">🎨</div>
+            <h3>CSS</h3>
+            <ul>
+              <li>Parts 01–06 core CSS</li>
+              <li>Flexbox, Grid, responsive</li>
+              <li>Transitions &amp; animations</li>
+              <li>Bootstrap 5.3 (13 lectures)</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="card-icon">⚡</div>
+            <h3>JavaScript</h3>
+            <ul>
+              <li>Operators &amp; comparisons</li>
+              <li>Conditionals &amp; logical ops</li>
+              <li>Truthy / falsy values</li>
+              <li>Alerts, prompts &amp; DOM</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="card-icon">🗂️</div>
+            <h3>Projects</h3>
+            <ul>
+              <li>6 resume-ready templates</li>
+              <li>Weather, To-Do, E-Commerce</li>
+              <li>Movie Search, Quiz, Portfolio</li>
+              <li>Each with README + setup</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>Built with ❤️ using HTML, CSS & JavaScript.</p>
-    <p class="footer-sub">© 2026 · Released under the MIT License</p>
+    <!-- FEATURED -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Featured</span>
+          <h2>Featured Projects</h2>
+          <p>Real UIs built with plain HTML, CSS &amp; JavaScript.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-thumb thumb-spotify">
+              <span>🎧</span>
+            </div>
+            <div class="project-body">
+              <h3>Spotify Clone</h3>
+              <p>Full working local music player — play/pause, queue, shuffle, repeat, likes, volume, search overlay, keyboard support.</p>
+              <div class="project-meta">
+                <span>HTML</span><span>CSS</span><span>JS</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-thumb thumb-travel">
+              <span>✈️</span>
+            </div>
+            <div class="project-body">
+              <h3>TraveLand</h3>
+              <p>Complete tour &amp; travel agency website template — multi-page, production-grade structure.</p>
+              <div class="project-meta">
+                <span>HTML</span><span>Assets</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-thumb thumb-bootstrap">
+              <span>🅱️</span>
+            </div>
+            <div class="project-body">
+              <h3>Bootstrap 5 Assignment</h3>
+              <p>Hands-on project using Bootstrap components, grid system and utilities.</p>
+              <div class="project-meta">
+                <span>Bootstrap 5</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-thumb thumb-anim">
+              <span>🎬</span>
+            </div>
+            <div class="project-body">
+              <h3>CSS Animations</h3>
+              <p>Collection of animation-driven mini-projects exploring keyframes, transforms &amp; transitions.</p>
+              <div class="project-meta">
+                <span>CSS</span><span>Animations</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME PROJECTS -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Resume</span>
+          <h2>Projects for Your Resume</h2>
+          <p>Starter templates in <code>04 Projects/</code> — build, customize, deploy.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="proj-table">
+            <thead>
+              <tr><th>#</th><th>Project</th><th>Key Skills</th><th>Level</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>01</td><td>Weather App</td><td>REST API, async/await, geolocation, localStorage</td><td>Beginner–Intermediate</td></tr>
+              <tr><td>02</td><td>Smart To-Do</td><td>CRUD, drag-and-drop, theming, persistence</td><td>Beginner</td></tr>
+              <tr><td>03</td><td>Mini E-Commerce Store</td><td>Filtering, sorting, cart state, checkout</td><td>Intermediate</td></tr>
+              <tr><td>04</td><td>Movie Search App</td><td>Debounced search, API, favorites, pagination</td><td>Intermediate</td></tr>
+              <tr><td>05</td><td>Quiz App</td><td>Timers, scoring, leaderboard, state</td><td>Beginner–Intermediate</td></tr>
+              <tr><td>06</td><td>Personal Portfolio</td><td>Responsive layout, theming, deployment</td><td>Beginner</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section id="stack" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Tech</span>
+          <h2>Tech Stack</h2>
+        </div>
+        <div class="stack-grid">
+          <div class="stack-item"><span class="stack-icon">🧱</span><div><h4>HTML5</h4><p>Semantic markup, forms, media</p></div></div>
+          <div class="stack-item"><span class="stack-icon">🎨</span><div><h4>CSS3</h4><p>Flexbox, Grid, animations</p></div></div>
+          <div class="stack-item"><span class="stack-icon">🅱️</span><div><h4>Bootstrap 5.3</h4><p>Components &amp; utilities</p></div></div>
+          <div class="stack-item"><span class="stack-icon">⚡</span><div><h4>JavaScript ES6+</h4><p>Operators, DOM, async</p></div></div>
+          <div class="stack-item"><span class="stack-icon">🖥️</span><div><h4>Browser / Node</h4><p>No build step required</p></div></div>
+          <div class="stack-item"><span class="stack-icon">🛠️</span><div><h4>Git · VS Code</h4><p>Tooling &amp; workflow</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- START -->
+    <section id="start" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Get Started</span>
+          <h2>Run It Locally</h2>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-body">
+              <h3>Clone</h3>
+              <pre><code>git clone https://github.com/shubham17290/mern.git
+cd mern</code></pre>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-body">
+              <h3>Serve</h3>
+              <pre><code>python -m http.server 8000
+# open http://127.0.0.1:8000</code></pre>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-body">
+              <h3>Run JS</h3>
+              <pre><code>cd "03 JavaScript/01 Phase 1 and 2/00 Basics"
+node app.js</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="brand">
+          <span class="brand-mark">MH</span>
+          <span class="brand-name">MERN<span class="accent">.HuB</span></span>
+        </div>
+        <p class="footer-note">Built with ❤️ by Shubham Maurya (aka Gian). MIT Licensed.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/shubham17290" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:smourya1046@gmail.com">Email</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+    <div class="footer-bar"></div>
   </footer>
 
   <script src="script.js"></script>
