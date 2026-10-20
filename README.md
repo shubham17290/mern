@@ -93,7 +93,7 @@ web-development/
 │   ├── 10 CSS frameworks/                      # Bootstrap 5 (13 lectures + assignment)
 │   └── 11 CSS projects/                        # Spotify clone (full working player)
 ├── 03 JavaScript/
-│   ├── 01 JavaScript phase 1 and 2/            # Operators, conditionals, logical ops,
+│   ├── 01 Phase 1 and 2/            # Operators, conditionals, logical ops,
 │   │                                           # truthy/falsy, switch, alerts & prompts
 │   ├── index.html                              # Demo entry point (loads a JS file)
 │   └── README.md                               # Detailed JS module guide
@@ -244,14 +244,14 @@ python -m http.server 8000
 ### 3. Run a JavaScript file with Node.js
 
 ```bash
-cd "03 JavaScript/01 JavaScript phase 1 and 2/00 Basics"
+cd "03 JavaScript/01 Phase 1 and 2/00 Basics"
 node app.js
 ```
 
 Any file can be run the same way:
 
 ```bash
-node "03 JavaScript/01 JavaScript phase 1 and 2/06 Swtich statement/_02_practice.js"
+node "03 JavaScript/01 Phase 1 and 2/06 Swtich statement/_02_practice.js"
 ```
 
 ### 4. Regenerate Spotify clone media (optional)

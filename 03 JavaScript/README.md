@@ -26,7 +26,7 @@ concept you want to revise.
 03 JavaScript/
 ├── index.html                              # Demo entry point (loads a JS file)
 ├── style.css                               # Custom styles (currently empty)
-└── 01 JavaScript phase 1 and 2/
+└── 01 Phase 1 and 2/
     ├── 00 Basics/
     │   └── app.js                          # Arithmetic, assignment, comparison operators
     ├── 01 Comparision Statements/
@@ -97,7 +97,7 @@ concept you want to revise.
 
 ### In the browser
 1. Open `index.html` in any modern browser.
-2. The page currently loads `01 JavaScript phase 1 and 2/07 Alerts and prompts/_2_prompt.js`,
+2. The page currently loads `01 Phase 1 and 2/07 Alerts and prompts/_2_prompt.js`,
    which prompts for your first and last name and shows a welcome alert.
 3. To try a different concept, edit the `<script src="...">` tag in `index.html`
    to point at any other `.js` file, then refresh.
@@ -106,12 +106,12 @@ concept you want to revise.
 
 ### With Node.js
 ```bash
-cd "01 JavaScript phase 1 and 2/00 Basics"
+cd "01 Phase 1 and 2/00 Basics"
 node app.js
 ```
 Any file can be run the same way:
 ```bash
-node "01 JavaScript phase 1 and 2/06 Swtich statement/_02_practice.js"
+node "01 Phase 1 and 2/06 Swtich statement/_02_practice.js"
 ```
 
 ## 🎯 Learning Goals
