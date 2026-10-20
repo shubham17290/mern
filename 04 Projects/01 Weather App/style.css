@@ -1,0 +1,41 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --accent: #38bdf8;
+  --muted: #94a3b8;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.app { width: 100%; max-width: 720px; }
+h1 { text-align: center; margin-bottom: 0.25rem; }
+.subtitle { text-align: center; color: var(--muted); margin-bottom: 1.5rem; }
+
+.search { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; }
+.search input {
+  flex: 1; min-width: 200px; padding: 0.6rem 0.9rem;
+  border-radius: 8px; border: 1px solid #334155; background: var(--card); color: var(--text);
+}
+.search button {
+  padding: 0.6rem 1rem; border: none; border-radius: 8px;
+  background: var(--accent); color: #0f172a; font-weight: 600; cursor: pointer;
+}
+.search button:hover { opacity: 0.9; }
+
+.status { text-align: center; margin: 1rem 0; color: var(--muted); }
+.hidden { display: none; }
+
+/* TODO: style current weather card & forecast grid */
+.current, .forecast { margin-top: 1.5rem; }

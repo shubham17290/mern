@@ -23,6 +23,7 @@
   - [CSS](#css)
   - [JavaScript](#javascript)
 - [🌟 Featured Projects](#featured-projects)
+- [🗂️ Projects (Resume)](#projects-resume)
 - [🛠 Tech Stack](#tech-stack)
 - [📋 Prerequisites](#prerequisites)
 - [⚙️ Getting Started](#getting-started)
@@ -97,6 +98,13 @@ web-development/
 │   │                                           # truthy/falsy, switch, alerts & prompts
 │   ├── index.html                              # Demo entry point (loads a JS file)
 │   └── README.md                               # Detailed JS module guide
+├── 04 Projects/                                # Resume-worthy projects (starter templates)
+│   ├── 01 Weather App/
+│   ├── 02 Smart To-Do/
+│   ├── 03 Mini E-Commerce Store/
+│   ├── 04 Movie Search App/
+│   ├── 05 Quiz App/
+│   └── 06 Personal Portfolio/
 └── README.md                                   # ← you are here
 ```
 
@@ -188,6 +196,25 @@ A hands-on project built while learning Bootstrap 5 components, grid system and 
 ### 🎬 CSS Animation Projects — `02 CSS/08 CSS part 06/00 CSS Animations Projects`
 
 A collection of animation-driven mini-projects exploring keyframes, transforms and transitions.
+
+---
+
+<a id="projects-resume"></a>
+
+## 🗂️ Projects (Resume)
+
+Starter templates in `04 Projects/` — build, customize, deploy, and add to your resume.
+
+| # | Project | Key Skills | Level |
+|---|---------|------------|-------|
+| 01 | **Weather App** | REST API, async/await, geolocation, localStorage | Beginner–Intermediate |
+| 02 | **Smart To-Do** | CRUD, drag-and-drop, theming, persistence | Beginner |
+| 03 | **Mini E-Commerce Store** | Filtering, sorting, cart state, checkout | Intermediate |
+| 04 | **Movie Search App** | Debounced search, API, favorites, pagination | Intermediate |
+| 05 | **Quiz App** | Timers, scoring, leaderboard, state | Beginner–Intermediate |
+| 06 | **Personal Portfolio** | Responsive layout, theming, deployment | Beginner |
+
+> Each folder contains `index.html`, `style.css`, `script.js`, and a `README.md` with setup + resume line.
 
 ---
 

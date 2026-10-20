@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini E-Commerce Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <h1 class="logo">🛍️ MiniStore</h1>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search products..." />
+      <select id="category"><option value="all">All Categories</option></select>
+      <select id="sort">
+        <option value="default">Sort</option>
+        <option value="price-asc">Price: Low → High</option>
+        <option value="price-desc">Price: High → Low</option>
+      </select>
+    </div>
+    <button id="cartBtn" class="cart-btn">🛒 <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section id="products" class="products"></section>
+  </main>
+
+  <!-- Cart drawer -->
+  <aside id="cartDrawer" class="cart-drawer hidden">
+    <div class="cart-head">
+      <h2>Your Cart</h2>
+      <button id="closeCart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-foot">
+      <p>Total: <strong id="cartTotal">₹0</strong></p>
+      <button id="checkout">Checkout</button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
