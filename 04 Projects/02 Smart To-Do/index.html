@@ -9,24 +9,36 @@
 <body>
   <main class="app">
     <header class="top">
-      <h1>Smart To-Do ✅</h1>
+      <div>
+        <h1>Smart To-Do ✅</h1>
+        <p class="subtitle">Organize your day. Drag to reorder. Data saved locally.</p>
+      </div>
       <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
     </header>
 
     <form id="taskForm" class="task-form">
       <input type="text" id="taskInput" placeholder="What needs to be done?" required />
-      <select id="priority">
+      <select id="priority" title="Priority">
         <option value="low">Low</option>
         <option value="medium" selected>Medium</option>
         <option value="high">High</option>
       </select>
+      <input type="date" id="dueDate" title="Due date" />
       <button type="submit">Add</button>
     </form>
 
-    <div class="filters">
-      <button data-filter="all" class="active">All</button>
-      <button data-filter="active">Active</button>
-      <button data-filter="completed">Completed</button>
+    <div class="toolbar">
+      <div class="filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="active">Active</button>
+        <button data-filter="completed">Completed</button>
+      </div>
+      <button id="clearCompleted" class="clear-btn">Clear completed</button>
+    </div>
+
+    <div class="stats">
+      <span id="activeCount">0 active</span>
+      <span id="doneCount">0 completed</span>
     </div>
 
     <ul id="taskList" class="task-list"></ul>

@@ -1,8 +1,9 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #f8fafc; --card: #ffffff; --text: #0f172a;
+  --bg: #f1f5f9; --card: #ffffff; --text: #0f172a;
   --accent: #6366f1; --muted: #64748b; --border: #e2e8f0;
+  --danger: #ef4444; --success: #22c55e; --warning: #f59e0b;
 }
 body.dark {
   --bg: #0f172a; --card: #1e293b; --text: #e2e8f0;
@@ -10,29 +11,106 @@ body.dark {
 }
 
 body {
-  font-family: "Segoe UI", system-ui, sans-serif;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   background: var(--bg); color: var(--text);
   min-height: 100vh; padding: 2rem 1rem;
   transition: background 0.3s, color 0.3s;
 }
-.app { max-width: 600px; margin: 0 auto; }
+.app { max-width: 640px; margin: 0 auto; }
 
-.top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+.top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem; }
+h1 { font-size: 1.7rem; line-height: 1.2; }
+.subtitle { color: var(--muted); font-size: 0.9rem; margin-top: 0.25rem; }
 .icon-btn { background: none; border: none; font-size: 1.4rem; cursor: pointer; }
 
-.task-form { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
-.task-form input { flex: 1; padding: 0.6rem 0.9rem; border: 1px solid var(--border); border-radius: 8px; background: var(--card); color: var(--text); }
-.task-form select, .task-form button { padding: 0.6rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); color: var(--text); cursor: pointer; }
-.task-form button { background: var(--accent); color: #fff; border: none; font-weight: 600; }
+.task-form { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.task-form input[type="text"] {
+  flex: 1; min-width: 180px; padding: 0.6rem 0.9rem;
+  border: 1px solid var(--border); border-radius: 8px; background: var(--card); color: var(--text);
+  font-size: 0.95rem;
+}
+.task-form select, .task-form input[type="date"], .task-form button {
+  padding: 0.6rem; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--card); color: var(--text); cursor: pointer; font-size: 0.9rem;
+}
+.task-form button {
+  background: var(--accent); color: #fff; border: none; font-weight: 600; padding: 0.6rem 1.2rem;
+  transition: opacity .2s, transform .1s;
+}
+.task-form button:hover { opacity: 0.9; }
+.task-form button:active { transform: scale(0.97); }
 
-.filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
-.filters button { padding: 0.4rem 0.9rem; border: 1px solid var(--border); border-radius: 999px; background: var(--card); color: var(--text); cursor: pointer; }
+.toolbar { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+.filters { display: flex; gap: 0.4rem; }
+.filters button {
+  padding: 0.35rem 0.85rem; border: 1px solid var(--border); border-radius: 999px;
+  background: var(--card); color: var(--text); cursor: pointer; font-size: 0.85rem;
+  transition: all .2s;
+}
 .filters button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.clear-btn {
+  padding: 0.35rem 0.85rem; border: 1px solid var(--border); border-radius: 999px;
+  background: var(--card); color: var(--muted); cursor: pointer; font-size: 0.85rem;
+}
+.clear-btn:hover { color: var(--danger); border-color: var(--danger); }
+
+.stats { display: flex; gap: 1rem; color: var(--muted); font-size: 0.85rem; margin-bottom: 0.75rem; }
 
 .task-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-.task { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: var(--card); border: 1px solid var(--border); border-radius: 8px; }
-.task.done span { text-decoration: line-through; color: var(--muted); }
-.task .priority { font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 999px; color: #fff; }
-.priority.low { background: #22c55e; } .priority.medium { background: #f59e0b; } .priority.high { background: #ef4444; }
-.task button { margin-left: auto; background: none; border: none; cursor: pointer; color: var(--muted); }
-.empty { text-align: center; color: var(--muted); margin-top: 2rem; }
+.task {
+  display: flex; align-items: center; gap: 0.65rem;
+  padding: 0.7rem 0.85rem; background: var(--card); border: 1px solid var(--border);
+  border-radius: 10px; transition: transform .15s, box-shadow .15s, opacity .2s;
+  cursor: grab;
+}
+.task:active { cursor: grabbing; }
+.task.dragging { opacity: 0.4; transform: scale(0.98); }
+.task.drag-over { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+.task.done { opacity: 0.65; }
+.task.done .task-text { text-decoration: line-through; color: var(--muted); }
+
+.handle { color: var(--muted); cursor: grab; user-select: none; font-size: 1rem; }
+
+.task input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer; }
+
+.task-body { flex: 1; min-width: 0; }
+.task-text { word-break: break-word; }
+.task-meta { display: flex; gap: 0.5rem; margin-top: 0.3rem; flex-wrap: wrap; align-items: center; }
+
+.priority {
+  font-size: 0.7rem; padding: 0.15rem 0.55rem; border-radius: 999px; color: #fff; font-weight: 600;
+}
+.priority.low { background: var(--success); }
+.priority.medium { background: var(--warning); color: #1f2937; }
+.priority.high { background: var(--danger); }
+
+.due {
+  font-size: 0.75rem; color: var(--muted); padding: 0.15rem 0.5rem;
+  border-radius: 6px; background: var(--bg);
+}
+.due.overdue { color: #fff; background: var(--danger); }
+.due.soon { color: #1f2937; background: var(--warning); }
+
+.task-actions { display: flex; gap: 0.25rem; }
+.task-actions button {
+  background: none; border: none; cursor: pointer; color: var(--muted);
+  font-size: 1rem; padding: 0.2rem 0.4rem; border-radius: 6px; transition: all .15s;
+}
+.task-actions button:hover { background: var(--bg); color: var(--text); }
+.task-actions .del:hover { color: var(--danger); }
+
+/* Inline edit */
+.task.editing .task-text { display: none; }
+.edit-input {
+  flex: 1; padding: 0.35rem 0.6rem; border: 1px solid var(--accent); border-radius: 6px;
+  background: var(--card); color: var(--text); font-size: 0.95rem;
+}
+
+.empty { text-align: center; color: var(--muted); margin-top: 2rem; font-size: 0.95rem; }
+
+/* Enter animation */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.task { animation: slideIn .2s ease; }
