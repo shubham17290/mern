@@ -1,7 +1,7 @@
 // Weather App — full implementation
 // 1) Get a free API key from https://openweathermap.org/api
 // 2) Paste it below (replace the placeholder).
-const API_KEY = "YOUR_API_KEY";
+const API_KEY = (window.CONFIG && window.CONFIG.API_KEY) || "YOUR_API_KEY";
 const BASE = "https://api.openweathermap.org/data/2.5";
 
 const RECENT_KEY = "weather-recent-cities";
@@ -47,30 +47,45 @@ async function api(path) {
 
 async function searchCity(city) {
   if (API_KEY === "YOUR_API_KEY") {
-    return showError("Please add your OpenWeatherMap API key in script.js (see README).");
+    return showError(
+      "Please add your OpenWeatherMap API key in script.js (see README)."
+    );
   }
   setLoading(`Searching "${city}"...`);
   try {
-    const current = await api(`/weather?q=${encodeURIComponent(city)}&units=metric`);
-    const forecast = await api(`/forecast?q=${encodeURIComponent(city)}&units=metric`);
+    const current = await api(
+      `/weather?q=${encodeURIComponent(city)}&units=metric`
+    );
+    const forecast = await api(
+      `/forecast?q=${encodeURIComponent(city)}&units=metric`
+    );
     lastData = { current, forecast };
     saveRecent(current.name);
     renderAll();
     setStatus("");
   } catch (err) {
-    showError(err.message === "city not found" ? `City "${city}" not found.` : err.message);
+    showError(
+      err.message === "city not found"
+        ? `City "${city}" not found.`
+        : err.message
+    );
   }
 }
 
 async function useMyLocation() {
-  if (!navigator.geolocation) return showError("Geolocation is not supported by your browser.");
+  if (!navigator.geolocation)
+    return showError("Geolocation is not supported by your browser.");
   setLoading("Getting your location...");
   navigator.geolocation.getCurrentPosition(
     async (pos) => {
       const { latitude, longitude } = pos.coords;
       try {
-        const current = await api(`/weather?lat=${latitude}&lon=${longitude}&units=metric`);
-        const forecast = await api(`/forecast?lat=${latitude}&lon=${longitude}&units=metric`);
+        const current = await api(
+          `/weather?lat=${latitude}&lon=${longitude}&units=metric`
+        );
+        const forecast = await api(
+          `/forecast?lat=${latitude}&lon=${longitude}&units=metric`
+        );
         lastData = { current, forecast };
         saveRecent(current.name);
         renderAll();
@@ -79,7 +94,10 @@ async function useMyLocation() {
         showError(err.message);
       }
     },
-    () => showError("Location access denied. Please allow location or search manually."),
+    () =>
+      showError(
+        "Location access denied. Please allow location or search manually."
+      ),
     { enableHighAccuracy: true, timeout: 10000 }
   );
 }
@@ -95,11 +113,15 @@ function renderAll() {
   forecastEl.classList.remove("hidden");
 }
 
-function cToF(c) { return c * 9 / 5 + 32; }
-function msToMph(ms) { return ms * 2.23694; }
+function cToF(c) {
+  return (c * 9) / 5 + 32;
+}
+function msToMph(ms) {
+  return ms * 2.23694;
+}
 function fmtTemp(c) {
   const v = unit === "metric" ? c : cToF(c);
-  return `${Math.round(v)}°`;
+  return Math.round(v);
 }
 function fmtWind(ms) {
   if (unit === "metric") return `${Math.round(ms * 3.6)} km/h`;
@@ -113,7 +135,9 @@ function fmtVisibility(m) {
 function renderCurrent(d) {
   const icon = d.weather[0].icon;
   const date = new Date(d.dt * 1000).toLocaleDateString(undefined, {
-    weekday: "long", month: "short", day: "numeric"
+    weekday: "long",
+    month: "short",
+    day: "numeric"
   });
   currentEl.innerHTML = `
     <img class="icon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${d.weather[0].description}" />
@@ -140,25 +164,33 @@ function renderDetails(d) {
 function renderForecast(f) {
   // Aggregate 3-hour entries into one per day (pick noon-ish entry)
   const byDay = {};
-  f.list.forEach(item => {
+  f.list.forEach((item) => {
     const day = item.dt_txt.split(" ")[0];
     const hour = item.dt_txt.split(" ")[1];
     if (!byDay[day] || hour === "12:00:00") byDay[day] = item;
   });
   const days = Object.keys(byDay).slice(0, 5);
 
-  forecastEl.innerHTML = `<h3>5-Day Forecast</h3><div class="forecast-grid">` +
-    days.map(day => {
-      const it = byDay[day];
-      const dname = new Date(day).toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" });
-      return `
+  forecastEl.innerHTML =
+    `<h3>5-Day Forecast</h3><div class="forecast-grid">` +
+    days
+      .map((day) => {
+        const it = byDay[day];
+        const dname = new Date(day).toLocaleDateString(undefined, {
+          weekday: "short",
+          month: "short",
+          day: "numeric"
+        });
+        return `
         <div class="day">
           <div class="dname">${dname}</div>
           <img src="https://openweathermap.org/img/wn/${it.weather[0].icon}.png" alt="${it.weather[0].description}" />
           <div class="dtemp">${fmtTemp(it.main.temp)}°</div>
           <div class="ddesc">${it.weather[0].description}</div>
         </div>`;
-    }).join("") + `</div>`;
+      })
+      .join("") +
+    `</div>`;
 }
 
 // ---------- Unit toggle ----------
@@ -170,26 +202,37 @@ function toggleUnit() {
 }
 function updateUnitButton() {
   unitToggle.textContent = unit === "metric" ? "°C" : "°F";
-  unitToggle.title = unit === "metric" ? "Switch to Fahrenheit" : "Switch to Celsius";
+  unitToggle.title =
+    unit === "metric" ? "Switch to Fahrenheit" : "Switch to Celsius";
 }
 
 // ---------- Recent searches ----------
 function saveRecent(city) {
-  recent = [city, ...recent.filter(c => c.toLowerCase() !== city.toLowerCase())].slice(0, 6);
+  recent = [
+    city,
+    ...recent.filter((c) => c.toLowerCase() !== city.toLowerCase())
+  ].slice(0, 6);
   localStorage.setItem(RECENT_KEY, JSON.stringify(recent));
   renderRecent();
 }
 function renderRecent() {
-  if (!recent.length) { recentEl.classList.add("hidden"); recentEl.innerHTML = ""; return; }
+  if (!recent.length) {
+    recentEl.classList.add("hidden");
+    recentEl.innerHTML = "";
+    return;
+  }
   recentEl.classList.remove("hidden");
-  recentEl.innerHTML = recent.map(c =>
-    `<span class="chip" data-city="${c}">${c}<span class="x" data-remove="${c}">×</span></span>`
-  ).join("");
-  recentEl.querySelectorAll(".chip").forEach(chip => {
+  recentEl.innerHTML = recent
+    .map(
+      (c) =>
+        `<span class="chip" data-city="${c}">${c}<span class="x" data-remove="${c}">×</span></span>`
+    )
+    .join("");
+  recentEl.querySelectorAll(".chip").forEach((chip) => {
     chip.addEventListener("click", (e) => {
       if (e.target.classList.contains("x")) {
         const city = e.target.dataset.remove;
-        recent = recent.filter(c => c !== city);
+        recent = recent.filter((c) => c !== city);
         localStorage.setItem(RECENT_KEY, JSON.stringify(recent));
         renderRecent();
         e.stopPropagation();
