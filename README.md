@@ -10,8 +10,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)](http://makeapullrequest.com)
 [![Stars](https://img.shields.io/github/stars/shubham17290/mern?style=for-the-badge)](https://github.com/shubham17290/mern/stargazers)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-0ea5e9?style=for-the-badge&logo=github)](https://shubham17290.github.io/mern/)
 
 > A complete, hands-on learning repository for **Full Stack Web Development**. It collects every lecture, assignment, practice problem and mini-project across **HTML5, CSS3, JavaScript (ES6+), Bootstrap 5** — written as clean, well-commented, runnable code you can open in a browser or run with Node.js. No build step, no dependencies for the core lessons. 🚀
+>
+> 🌐 **Live site:** https://shubham17290.github.io/mern/  ·  📄 **License:** MIT  ·  🤝 **Contributions welcome**
 
 ---
 
@@ -107,6 +110,11 @@ web-development/
 │   ├── 04 Movie Search App/
 │   ├── 05 Quiz App/
 │   └── 06 Personal Portfolio/
+├── docs/                                       # GitHub Pages landing site
+├── assets/                                     # Screenshots & media
+├── .github/                                    # Issue/PR templates
+├── LICENSE                                     # MIT
+├── CONTRIBUTING.md
 └── README.md                                   # ← you are here
 ```
 
