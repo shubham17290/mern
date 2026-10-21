@@ -3,4 +3,4 @@
 // let msg = "   hi shubham   ";
 let password = prompt("Set your password : ");
 let pwd = password.trim();
-consolo.log(pwd);
+console.log(pwd);
