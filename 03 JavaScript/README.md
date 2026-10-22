@@ -57,7 +57,12 @@ you can jump straight to the concept you want to revise.
     └── 01 methods/
         ├── index.html                      # Demo page (loads the JS file)
         ├── _01_string_method.js            # String declaration & output
-        └── _02_string_method.js           # trim() method with prompt
+        ├── _02_string_method.js           # trim() method with prompt
+        ├── _03_strings_immutable.js        # Strings are immutable
+        ├── _04_lower_and_uppercase.js      # toLowerCase() / toUpperCase()
+        ├── _05_strings_with_argument.js    # indexOf()
+        ├── _06_method_chaining.js          # trim().toUpperCase() chaining
+        └── _07_slice.js                    # slice() method
 ```
 
 ## 🧠 Concepts Covered
@@ -104,6 +109,11 @@ you can jump straight to the concept you want to revise.
 #### 01 · String Methods
 - String declaration and output
 - `trim()` to remove leading/trailing whitespace
+- Strings are immutable (original string unchanged)
+- `toLowerCase()` / `toUpperCase()`
+- `indexOf()` to find a substring's position
+- Method chaining (`trim().toUpperCase()`)
+- `slice(start, end)` to extract a portion of a string
 - Using `prompt()` to capture and clean user input
 - Displaying the cleaned value with `alert()`
 
