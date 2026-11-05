@@ -25,7 +25,7 @@ you can jump straight to the concept you want to revise.
 ```text
 03 JavaScript/
 ├── README.md                               # This file
-├── 01 Phase 1 and 2/                       # Operators, conditionals, logic, alerts
+├── 00 Phase 1 and 2/                       # Operators, conditionals, logic, alerts
 │   ├── 00 Basics/
 │   │   └── app.js                          # Arithmetic, assignment, comparison operators
 │   ├── 01 Comparision Statements/
@@ -124,18 +124,18 @@ you can jump straight to the concept you want to revise.
 2. The page loads `02 Phase 3/01 methods/_02_string_method.js`, which prompts for a
    password, trims the whitespace and shows the cleaned value.
 3. To try Phase 1 & 2 concepts, point the `<script src="...">` tag in any demo
-   page at the relevant `.js` file (e.g. `01 Phase 1 and 2/07 Alerts and prompts/_2_prompt.js`).
+   page at the relevant `.js` file (e.g. `00 Phase 1 and 2/07 Alerts and prompts/_2_prompt.js`).
 
 > Tip: open DevTools (`F12` → Console) to see `console.log` output.
 
 ### With Node.js
 ```bash
-cd "01 Phase 1 and 2/00 Basics"
+cd "00 Phase 1 and 2/00 Basics"
 node app.js
 ```
 Any file can be run the same way:
 ```bash
-node "01 Phase 1 and 2/06 Swtich statement/_02_practice.js"
+node "00 Phase 1 and 2/06 Swtich statement/_02_practice.js"
 node "02 Phase 3/01 methods/_01_string_method.js"
 ```
 
